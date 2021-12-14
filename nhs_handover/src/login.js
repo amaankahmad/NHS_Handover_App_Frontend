@@ -5,6 +5,7 @@ import imperial_logo from "./imperiallogo.png";
 import sun from "./sun.png";
 import moon from "./moon.png";
 import {Routes, Route} from "react-router-dom";
+import { useNavigate } from 'react-router';
 
 function Header(props){
     return(
@@ -35,9 +36,15 @@ function Main(){
     )
 }
 function Footer(){
+    let navigate = useNavigate();
+    function handleClick() {
+        navigate('/shift')
+    }
+
     return(
+
         <footer>
-            <button style={{backgroundColor:'lightblue'}}>
+            <button onClick={handleClick} style={{backgroundColor:'lightblue'}}>
                 Login
             </button>
             <button style={{backgroundColor:'lightblue'}}>
@@ -65,8 +72,26 @@ function Main2(){
     return(
 
         <section>
-            <img src={sun} height={200} alt="sun"/>
-            <img src={moon} height={200} alt="moon"/>
+<p></p>
+            <div>
+            <button style={{backgroundColor:'lightblue'}}>
+                <figure>
+                <img src={sun} height={180} alt="sun"/>
+                    <figcaption>
+                        Ending Day Shift
+                    </figcaption>
+                </figure>
+            </button>
+            <button style={{backgroundColor:'lightblue'}}>
+                <figure>
+                <img src={moon} height={180} alt="moon"/>
+                    <figcaption>
+                        Start Evening Shift
+                    </figcaption>
+                </figure>
+            </button>
+            </div>
+
         </section>
 
     )
