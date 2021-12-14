@@ -2,10 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import Login from './login';
+import {BrowserRouter as Router} from "react-router-dom";
+
 
 
 ReactDOM.render(
-    <Login />,
+    <Router>
+    <Login />
+    </Router>,
     // React.createElement("h1",null,"Login Page"),
     //<React.StrictMode>
     // <App />
