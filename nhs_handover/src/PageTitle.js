@@ -13,8 +13,8 @@ export default function PageTitle({role}) {
     }
 
     return (
-        <div>
-            <h2>{res}</h2>
+        <div style={{paddingLeft: "80px"}}>
+            <h2 style={{color: 'blue'}}>{res}</h2>
         </div>
     )
 }

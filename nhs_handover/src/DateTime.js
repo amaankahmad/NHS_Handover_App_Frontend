@@ -33,9 +33,9 @@ export const DateTime = () => {
     var dateFormatted = weekday + ', ' + dateNum + dateEnd + monthName
 
     return(
-        <div>
+        <div style={{float:"right"}}>
             <p> {dateFormatted}</p>
-            <p> {time.slice(0,-3)}</p>
+            <p style={{float:"right"}}> {time.slice(0,-3)}</p>
 
         </div>
     )
