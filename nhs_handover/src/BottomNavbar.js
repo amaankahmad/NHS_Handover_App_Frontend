@@ -13,10 +13,10 @@ export default function BottomNavbar({role}) {
     }
 
     return (
-        <div className="bottom App">
+        <div className="bottom center">
             <>
-                <button type="button" className="btn btn-primary btn-lg">My Tasks</button>
-                <button type="button" className="btn btn-primary btn-lg">All Tasks</button>
+                <button type="button" className="btn btn-primary btn-lg" style={{marginRight:"10px"}}>My Tasks</button>
+                <button type="button" className="btn btn-primary btn-lg" style={{marginLeft:"10px"}}>All Tasks</button>
             </>
         </div>
     );

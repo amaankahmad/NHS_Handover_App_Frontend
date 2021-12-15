@@ -34,8 +34,9 @@ export const DateTime = () => {
 
     return(
         <div style={{float:"right"}}>
-            <p> {dateFormatted}</p>
-            <p style={{float:"right"}}> {time.slice(0,-3)}</p>
+            <p> </p>
+            <h4 style={{fontWeight: "bold", fontSize: "16px"}}> {dateFormatted}</h4>
+            <h4 style={{float:"right", fontWeight: "bold", fontSize: "16px"}}> {time.slice(0,-3)}</h4>
 
         </div>
     )
