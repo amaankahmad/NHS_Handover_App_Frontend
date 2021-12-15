@@ -5,35 +5,36 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import Dropdown from 'react-bootstrap/Dropdown';
 import { Checkbox } from 'react-bootstrap';
+import './NewTask.css';
 
 
 function NewTask() {
     return(
         <>
             <div >
-                <h1 style={{color:'lightblue', margin: "25px 0",paddingLeft: "50px"}}>
+                <h1 style={{color:'#21ACFA', margin: "25px 0",paddingLeft: "160px"}}>
                     NEW TASK:
                 </h1>
             </div>
             <div className="container">
-                <div className="container" style={{background:'#21ACFA', margin: "10px 0",paddingLeft: "50px" }} >
+                <div className="container" style={{background:'#ABDEFB', margin: "10px 0",paddingLeft: "50px" }} >
                     <div className="row" style={{margin: "10px 0",alignment:"center",paddingLeft: "0px"}}>
-                        <div className="col-2" style={{margin: "10px 0" }}> <input type="text" placeholder={"Patient Name"}/></div>
-                        <div className="col-2" style={{ margin: "10px 0" }}> <input type="text" placeholder={"Patient MRN Number"}/></div>
-                        <div className="col-2" style={{ margin: "10px 0" }}> <input type="text" placeholder={"Patient NHS Number"}/> </div>
-                        <div className="col-2" style={{margin: "10px 0" }}> <input type="text" placeholder={"Ward #"}/></div>
-                        <div className="col-4" style={{ margin: "10px 0" }}> <input type="text" placeholder={"Bed #"}/></div>
+                        <div className="col-2" id="patientName" style={{margin: "10px 0" }}> <input type="text" placeholder={"Patient Name"}/></div>
+                        <div className="col-2" id="MRNNumber" style={{ margin: "10px 0" }}> <input type="text" placeholder={"Patient MRN Number"}/></div>
+                        <div className="col-2" id="NHSNumber" style={{ margin: "10px 0" }}> <input type="text" placeholder={"Patient NHS Number"}/> </div>
+                        <div className="col-2" id="wardNumber" style={{margin: "10px 0" }}> <input type="text" placeholder={"Ward #"}/></div>
+                        <div className="col-4" id="bedNumber" style={{ margin: "10px 0" }}> <input type="text" placeholder={"Bed #"}/></div>
                     </div>
 
 
-                    <div className="row" style={{background:'#21ACFA', margin: "10px 0",paddingLeft: "15px"}}>
-                        <div className="col-4" style={{margin: "10px 0" ,paddingLeft: "0px"}}> <input type="text" placeholder={"DOB"}/></div>
+                    <div className="row" style={{margin: "10px 0",paddingLeft: "15px"}}>
+                        <div className="col-4" id="DOB" style={{margin: "10px 0" ,paddingLeft: "0px"}}> <input type="text" placeholder={"DOB"}/></div>
                         <div className="col-4" style={{margin: "10px 0" ,paddingLeft: "0px",color:'black'}}>
                                 {"\t"} Sex  :  {"\t"}
                             <input type="checkbox" id="Female" name="F"/>
                                 <label htmlFor="Female">F {"\t"} </label>
                             {"\t"}
-                            <input type="checkbox" id="Make" name="M"/>
+                            <input type="checkbox" id="Male" name="M"/>
                                 <label htmlFor="Female">M {"\t"}</label>
                         </div>
 
@@ -51,8 +52,8 @@ function NewTask() {
             </div>
 
             <div className="container">
-                <div className="btn-group dropright">
-                    <button type="button" className="btn btn-secondary btn-lg dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <div className="btn-group dropdown">
+                    <button type="button" id="taskType" className="btn btn-secondary btn-lg dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Task Type
                     </button>
                     <div className="dropdown-menu">
@@ -64,7 +65,7 @@ function NewTask() {
             </div>
 
             <div className="container">
-                <div className="container" style={{background: '#21ACFA', margin: "10px 0", alignment: 'left'}}>
+                <div className="container" style={{background: '#DDEFFA', margin: "10px 0", alignment: 'left'}}>
                     <div className="row">
 
                         <div className="col-4" style={{margin: "10px 0" ,color:'black'}}>
@@ -94,45 +95,17 @@ function NewTask() {
             </div>
 
             <div className="container">
-                <div style={{color: 'black', background: 'lightblue'}}>
+                <div style={{color: 'black', background: '#DDEFFA'}}>
                     <h2>Additional Notes </h2>
-                    - <p/>
+                    -<p/>
                     -<p/>
                     -<p/>
                     -<p/>
                 </div>
             </div>
-
-            <div className="container">
-                    <div className="container" style={{background: '#21ACFA', margin: "10px 0", alignment: 'left'}}>
-                        <div className="row">
-
-                            <div className="col-4" style={{margin: "10px 0" ,color:'black'}}>
-                                {"\t"} Seniority  :  {"\t"}
-                                <input type="checkbox" id="Junior" name="Junior"/>
-                                <label htmlFor="Junior">Junior{"\t"} </label>
-                                {"\t"}
-                                <input type="checkbox" id="SHO" name="SHO"/>
-                                <label htmlFor="SHO">SHO {"\t"}</label>
-                                {"\t"}
-                                <input type="checkbox" id="Consultant" name="Consultant"/>
-                                <label htmlFor="Consultant">Consultant {"\t"} </label>
-                                {"\t"}
-                            </div>
-
-                            <div className="col-4" style={{margin: "10px 0" ,paddingLeft: "0px",color:'black'}}>
-                                {"\t"} {"\t"} Covid Status  :  {"\t"}
-                                <input type="checkbox" style={{marginRight:"2px"}} id="Positive" name="Positive"/>
-                                <label htmlFor="Positive" style={{paddingLeft:"0px"}}>Positive {"\t"}</label>
-                                {"\t"}
-                                <input type="checkbox" style={{marginRight:"0px", paddingLeft:"0px"}} id="Negative" name="Negative"/>
-                                <label htmlFor="Negative" style={{paddingLeft:"2px"}}>Negative  </label>
-                            </div>
-                            <div className="col-4" style={{margin: "10px 0" ,paddingLeft: "00px"}}> <input type="text" placeholder={"Schedule"}/></div>
-                        </div>
-                    </div>
-            </div>
-
+            <button id="AddTask">
+                    Add Task
+            </button>
         </>
     )
 }
