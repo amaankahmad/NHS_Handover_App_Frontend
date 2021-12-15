@@ -36,3 +36,73 @@
         transform: rotate(360deg);
     }
 }
+
+#mainBox {
+    background-color: LightSkyblue;
+    width: 50%;
+    height: 15%;
+    position: fixed;
+    left: 22%;
+    top: 20%;
+    padding: 10px;
+}
+
+#nhsLogo {
+    background-color: LightSkyblue;
+    border-color: white;
+    border-width: 0.1px;
+    position: fixed;
+    right: 5%;
+    /*Percentage used because not all sceens have the same size*/
+    top: 2%;
+}
+
+#ourLogo {
+    border-color: white;
+    border-width: 0.1px;
+    position: fixed;
+    left: 5%;
+    /*Percentage used because not all sceens have the same size*/
+    top: 1%;
+}
+
+h1 {
+    color: LightSkyBlue;
+    position: fixed;
+    left: 40%;
+    top: 8%;
+}
+
+#button1 {
+    position: fixed;
+    left: 40%;
+    /*Percentage used because not all sceens have the same size*/
+    top: 40%;
+}
+#button2 {
+    position: fixed;
+    left: 50%;
+    /*Percentage used because not all sceens have the same size*/
+    top: 40%;
+}
+
+#button3 {
+    position: fixed;
+    left: 45%;
+    /*Percentage used because not all sceens have the same size*/
+    top: 47%;
+}
+
+#buttonSun {
+    position: fixed;
+    left: 15%;
+    /*Percentage used because not all sceens have the same size*/
+    top: 20%;
+}
+
+#buttonMoon {
+    position: fixed;
+    left: 55%;
+    /*Percentage used because not all sceens have the same size*/
+    top: 20%;
+}
