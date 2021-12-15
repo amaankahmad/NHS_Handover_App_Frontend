@@ -6,17 +6,25 @@ import DropdownButton from 'react-bootstrap/DropdownButton';
 import Dropdown from 'react-bootstrap/Dropdown';
 import { Checkbox } from 'react-bootstrap';
 import './NewTask.css';
+import DateTime from './DateTime'
+import taskIcon from './taskIcon.png';
 
 
 function NewTask() {
     return(
         <>
             <div >
-                <h1 style={{color:'#21ACFA', margin: "25px 0",paddingLeft: "160px"}}>
+                <h1 style={{color:'#21ACFA', margin: "15px 0",paddingLeft: "160px"}}>
                     NEW TASK:
+                    <img src={taskIcon} id = "taskIcon" height ={50} alt ="taskIcon"/>
                 </h1>
+
+                <div id="containerZero" className="container">
+
+                    <DateTime id={"DateTime"}/>
+                </div>
             </div>
-            <div className="container">
+            <div id="containerOne" className="container">
                 <div className="container" style={{background:'#ABDEFB', margin: "10px 0",paddingLeft: "50px" }} >
                     <div className="row" style={{margin: "10px 0",alignment:"center",paddingLeft: "0px"}}>
                         <div className="col-2" id="patientName" style={{margin: "10px 0" }}> <input type="text" placeholder={"Patient Name"}/></div>
@@ -51,7 +59,7 @@ function NewTask() {
                 </div>
             </div>
 
-            <div className="container">
+            <div id="containerTwo" className="container">
                 <div className="btn-group dropdown">
                     <button type="button" id="taskType" className="btn btn-secondary btn-lg dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Task Type
@@ -64,7 +72,7 @@ function NewTask() {
                 </div>
             </div>
 
-            <div className="container">
+            <div id="containerThree" className="container">
                 <div className="container" style={{background: '#DDEFFA', margin: "10px 0", alignment: 'left'}}>
                     <div className="row">
 
@@ -94,7 +102,7 @@ function NewTask() {
                 </div>
             </div>
 
-            <div className="container">
+            <div id="containerFour" className="container">
                 <div style={{color: 'black', background: '#DDEFFA'}}>
                     <h2>Additional Notes </h2>
                     -<p/>
