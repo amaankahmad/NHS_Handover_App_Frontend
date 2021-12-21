@@ -1,0 +1,68 @@
+NewTask{
+    text-align: center;
+}
+
+#taskIcon{
+    position: fixed;
+    right: 30px;
+}
+
+
+
+.patientName {
+    background-color: #21ACFA;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+#containerZero{
+    position: fixed;
+    top: 65px;
+    right: 5px;
+}
+
+#containerOne{
+    position: relative;
+    top: 25px;
+}
+
+#containerTwo{
+    position: relative;
+    top: 25px;
+}
+
+#containerThree{
+    position: relative;
+    top: 25px;
+}
+
+#containerFour{
+    position: relative;
+    top: 25px;
+}
+
+#taskType {
+    position: relative;
+    width: 1110px;
+    color: black;
+    top: 0px;
+    background-color: #21ACFA;
+    border-radius: 2px;
+}
+
+#AddTask {
+    position: relative;
+    top: 25px;
+    left:45%;
+    height: 40px;
+    width: 150px;
+    color: white;
+    border-color: #21ACFA;
+    background-color: DodgerBlue;
+    border-radius: 2px;
+}
