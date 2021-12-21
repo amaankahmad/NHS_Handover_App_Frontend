@@ -5,10 +5,14 @@ import Handover from "./Handover";
 import reportWebVitals from "./reportWebVitals";
 import 'bootstrap/dist/css/bootstrap.css';
 ReactDOM.render(
-    <React.StrictMode>
-        <Handover />
-    </React.StrictMode>,
-    document.getElementById("root")
+    <Router>
+    <Login />
+    </Router>,
+    // React.createElement("h1",null,"Login Page"),
+    //<React.StrictMode>
+    // <App />
+    //</React.StrictMode>,
+    document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function
