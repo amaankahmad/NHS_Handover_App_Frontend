@@ -1,4 +1,4 @@
-import './App.css';
+import './HandoverScreen.css';
 import React from 'react';
 import DateTime from './DateTime'
 import image from "./task icon.png"

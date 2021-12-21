@@ -1,4 +1,4 @@
-import './App.css'
+import './HandoverScreen.css';
 import {Button} from "react-bootstrap";
 
 export default function TaskOverview() {

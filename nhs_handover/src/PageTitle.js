@@ -1,4 +1,4 @@
-import './App.css';
+import './HandoverScreen.css';
 
 export default function PageTitle({role}) {
     var res = ""

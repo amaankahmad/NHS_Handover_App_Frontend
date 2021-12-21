@@ -1,10 +1,10 @@
-import './App.css';
+import './HandoverScreen.css';
 import BottomNavbar from "./BottomNavbar";
 import WelcomeBanner from "./WelcomeBanner";
 import PageTitle from "./PageTitle";
 import TasksBox from "./TasksBox";
 
-function App() {
+function Handover() {
     return (
         <>
             {/* Modularising the code such that we can just import Bottom Navbar whenever needed as a template */}
@@ -16,4 +16,4 @@ function App() {
     );
 }
 
-export default App;
+export default Handover;

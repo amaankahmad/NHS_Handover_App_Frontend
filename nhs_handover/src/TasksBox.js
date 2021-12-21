@@ -1,4 +1,4 @@
-import './App.css'
+import './HandoverScreen.css';
 import TaskOverview from "./TaskOverview";
 
 export default function TasksBox() {
