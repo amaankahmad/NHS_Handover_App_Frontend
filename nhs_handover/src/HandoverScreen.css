@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 }
+
+.bottom {
+  position: absolute;
+  bottom: 50px;
+}
+
+.center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}

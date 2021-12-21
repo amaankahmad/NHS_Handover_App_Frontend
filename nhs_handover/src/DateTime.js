@@ -33,7 +33,8 @@ export const DateTime = () => {
     var dateFormatted = weekday + ', ' + dateNum + dateEnd + monthName
 
     return(
-        <div id="DateTime" style={{float:"right"}}>
+        <div style={{float:"right"}}>
+            <p> </p>
             <h4 style={{fontWeight: "bold", fontSize: "16px"}}> {dateFormatted}</h4>
             <h4 style={{float:"right", fontWeight: "bold", fontSize: "16px"}}> {time.slice(0,-3)}</h4>
 

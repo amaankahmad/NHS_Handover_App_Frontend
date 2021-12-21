@@ -1,6 +1,5 @@
 import logo from './logo.svg';
 import './App.css';
-import new_task from "./NewTask";
 
 function App() {
   return (
