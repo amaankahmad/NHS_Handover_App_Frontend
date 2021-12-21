@@ -1,0 +1,129 @@
+Signup {
+    text-align: center;
+}
+
+.Signup-logo {
+    height: 40vmin;
+    pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .Signup-logo {
+        animation: Signup-logo-spin infinite 20s linear;
+    }
+}
+
+.Signup-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.Signup-link {
+    color: #61dafb;
+}
+
+@keyframes Signup-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#nhsLogo {
+    background-color: LightSkyblue;
+    border-color: white;
+    border-width: 0.1px;
+    position: fixed;
+    right: 5%;
+    /*Percentage used because not all sceens have the same size*/
+    top: 2%;
+}
+#signupLogo {
+    position: fixed;
+    left: 3%;
+    top:  1%;
+}
+
+#mainBox {
+    background-color: LightSkyblue;
+    width: 40%;
+    height: 50%;
+    position: fixed;
+    left: 10%;
+    top: 16%;
+    padding: 10px;
+}
+#register {
+    position: fixed;
+    left: 16%;
+    bottom: 22%;
+    height: 40px;
+    width: 150px;
+    color: white;
+    border-color: DodgerBlue;
+    background-color: DodgerBlue;
+    border-radius: 2px;
+}
+#returnLogin {
+    position: fixed;
+    left: 34%;
+    bottom: 22%;
+    height: 40px;
+    width: 150px;
+    color: white;
+    border-color: DodgerBlue;
+    background-color: DodgerBlue;
+    border-radius: 2px;
+}
+
+h2 {
+    color: DodgerBlue;
+    position: fixed;
+    left: 10%;
+    top: 8%;
+}
+
+label {
+    display: table-cell;
+    text-align: left;
+}
+input {
+    display: table-cell;
+    margin: 20px;
+    width: 350px;
+    border: none;
+    background-color: aliceblue;
+    padding: 2px;
+
+
+}
+select {
+    display: table-cell;
+    margin: 20px;
+    width: 355px;
+    border: none;
+    background-color: aliceblue;
+}
+div.row{
+    display: table-row;
+    margin: 10px;
+}
+
+#docfemale{
+    position: fixed;
+    right: 18.5%;
+    bottom: 7%;
+}
+#docmale{
+    position: fixed;
+    right: 3%;
+    bottom: 20%;
+}
