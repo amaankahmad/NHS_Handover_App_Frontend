@@ -72,12 +72,12 @@ Signup {
     background-color: DodgerBlue;
     border-radius: 2px;
 }
-#returnLogin {
+#returnLogIn {
     position: fixed;
     left: 34%;
     bottom: 22%;
     height: 40px;
-    width: 150px;
+    width: 170px;
     color: white;
     border-color: DodgerBlue;
     background-color: DodgerBlue;

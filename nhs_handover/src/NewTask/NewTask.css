@@ -10,7 +10,7 @@ NewTask{
 
 
 .patientName {
-    background-color: #21ACFA;
+    background-color: LightSkyBlue;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -51,7 +51,7 @@ NewTask{
     width: 1110px;
     color: black;
     top: 0px;
-    background-color: #21ACFA;
+    background-color: LightSkyBlue;
     border-radius: 2px;
 }
 
@@ -62,7 +62,7 @@ NewTask{
     height: 40px;
     width: 150px;
     color: white;
-    border-color: #21ACFA;
+    border-color: LightSkyBlue;
     background-color: DodgerBlue;
     border-radius: 2px;
 }

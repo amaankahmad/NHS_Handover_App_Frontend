@@ -1,18 +1,23 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
-import "./index.css"
+import "../index.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import Dropdown from 'react-bootstrap/Dropdown';
 import { Checkbox } from 'react-bootstrap';
 import './NewTask.css';
 import DateTime from './DateTime'
-import taskIcon from './taskIcon.png';
+import taskIcon from '../Asset/taskIcon.png';
+import {Routes, Route} from "react-router-dom";
+import { useNavigate } from 'react-router';
+
 
 
 function NewTask() {
     return(
-        <>
+        <div className={"NewTask"}>
+            <Routes>
+                <Route path="/NewTask" element = {<>
             <div >
                 <h1 style={{color:'#21ACFA', margin: "15px 0",paddingLeft: "160px"}}>
                     NEW TASK:
@@ -114,7 +119,9 @@ function NewTask() {
             <button id="AddTask">
                     Add Task
             </button>
-        </>
+                </>}/>
+                    </Routes>
+                    </div>
     )
 }
 export default NewTask;
