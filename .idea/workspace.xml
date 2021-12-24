@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="513c6fc4-58f2-4f1c-b52d-6f9756d657b4" name="Changes" comment="new branch dev_task">
-      <change beforePath="$PROJECT_DIR$/nhs_handover/src/NewTask.js" beforeDir="false" afterPath="$PROJECT_DIR$/nhs_handover/src/NewTask.js" afterDir="false" />
-    </list>
+    <list default="true" id="513c6fc4-58f2-4f1c-b52d-6f9756d657b4" name="Changes" comment="new branch dev_task" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,12 +26,20 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/nhs_handover/src/index.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/nhs_handover/src/App.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/nhs_handover/public/index.html" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/nhs_handover/src/App.test.js" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="ProjectId" id="22GsGmq5eiJaU7v4TVgMl6wLPji" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="postgresql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
