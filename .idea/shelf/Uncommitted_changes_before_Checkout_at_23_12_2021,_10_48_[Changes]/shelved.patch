@@ -1,0 +1,42 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"513c6fc4-58f2-4f1c-b52d-6f9756d657b4\" name=\"Changes\" comment=\"new branch dev_task\">\n      <change beforePath=\"$PROJECT_DIR$/nhs_handover/src/NewTask.js\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/nhs_handover/src/NewTask.js\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"CSS File\" />\n        <option value=\"JavaScript File\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\n      <map>\n        <entry key=\"$PROJECT_DIR$\" value=\"master\" />\n      </map>\n    </option>\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"ProjectId\" id=\"22GsGmq5eiJaU7v4TVgMl6wLPji\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\n    <property name=\"RunOnceActivity.ShowReadmeOnStart\" value=\"true\" />\n    <property name=\"WebServerToolWindowFactoryState\" value=\"false\" />\n    <property name=\"list.type.of.created.stylesheet\" value=\"CSS\" />\n    <property name=\"node.js.detected.package.eslint\" value=\"true\" />\n    <property name=\"node.js.detected.package.tslint\" value=\"true\" />\n    <property name=\"node.js.selected.package.eslint\" value=\"(autodetect)\" />\n    <property name=\"node.js.selected.package.tslint\" value=\"(autodetect)\" />\n    <property name=\"nodejs_interpreter_path\" value=\"node\" />\n    <property name=\"nodejs_package_manager_path\" value=\"npm\" />\n    <property name=\"settings.editor.selected.configurable\" value=\"settings.nodejs\" />\n  </component>\n  <component name=\"RecentsManager\">\n    <key name=\"MoveFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$/nhs_handover/src\" />\n    </key>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"513c6fc4-58f2-4f1c-b52d-6f9756d657b4\" name=\"Changes\" comment=\"\" />\n      <created>1639475170190</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1639475170190</updated>\n      <workItem from=\"1639475184769\" duration=\"2196000\" />\n      <workItem from=\"1639477536950\" duration=\"19775000\" />\n      <workItem from=\"1639501683894\" duration=\"30769000\" />\n    </task>\n    <task id=\"LOCAL-00001\" summary=\"new branch dev_task\">\n      <created>1639476673412</created>\n      <option name=\"number\" value=\"00001\" />\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1639476673412</updated>\n    </task>\n    <task id=\"LOCAL-00002\" summary=\"new branch dev_task\">\n      <created>1639476783062</created>\n      <option name=\"number\" value=\"00002\" />\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1639476783063</updated>\n    </task>\n    <task id=\"LOCAL-00003\" summary=\"new branch dev_task\">\n      <created>1639477249699</created>\n      <option name=\"number\" value=\"00003\" />\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1639477249700</updated>\n    </task>\n    <task id=\"LOCAL-00004\" summary=\"new branch dev_task\">\n      <created>1639525264581</created>\n      <option name=\"number\" value=\"00004\" />\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1639525264581</updated>\n    </task>\n    <task id=\"LOCAL-00005\" summary=\"new branch dev_task\">\n      <created>1639572171437</created>\n      <option name=\"number\" value=\"00005\" />\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1639572171438</updated>\n    </task>\n    <task id=\"LOCAL-00006\" summary=\"new branch dev_task\">\n      <created>1639576561431</created>\n      <option name=\"number\" value=\"00006\" />\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1639576561431</updated>\n    </task>\n    <option name=\"localTasksCounter\" value=\"7\" />\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n  <component name=\"Vcs.Log.Tabs.Properties\">\n    <option name=\"TAB_STATES\">\n      <map>\n        <entry key=\"MAIN\">\n          <value>\n            <State />\n          </value>\n        </entry>\n      </map>\n    </option>\n    <option name=\"oldMeFiltersMigrated\" value=\"true\" />\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <MESSAGE value=\"new branch dev_task\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"new branch dev_task\" />\n  </component>\n  <component name=\"XSLT-Support.FileAssociations.UIState\">\n    <expand />\n    <select />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision a9b4665a6bdbef891ed993f309771251c056c770)
++++ b/.idea/workspace.xml	(date 1640256297227)
+@@ -4,9 +4,7 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="513c6fc4-58f2-4f1c-b52d-6f9756d657b4" name="Changes" comment="new branch dev_task">
+-      <change beforePath="$PROJECT_DIR$/nhs_handover/src/NewTask.js" beforeDir="false" afterPath="$PROJECT_DIR$/nhs_handover/src/NewTask.js" afterDir="false" />
+-    </list>
++    <list default="true" id="513c6fc4-58f2-4f1c-b52d-6f9756d657b4" name="Changes" comment="new branch dev_task" />
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -23,12 +21,19 @@
+   <component name="Git.Settings">
+     <option name="RECENT_BRANCH_BY_REPOSITORY">
+       <map>
+-        <entry key="$PROJECT_DIR$" value="master" />
++        <entry key="$PROJECT_DIR$" value="dev_create_task_screen" />
+       </map>
+     </option>
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+   </component>
++  <component name="HighlightingSettingsPerFile">
++    <setting file="file://$PROJECT_DIR$/nhs_handover/src/index.js" root0="FORCE_HIGHLIGHTING" />
++    <setting file="file://$PROJECT_DIR$/nhs_handover/src/App.js" root0="FORCE_HIGHLIGHTING" />
++    <setting file="file://$PROJECT_DIR$/nhs_handover/public/index.html" root0="FORCE_HIGHLIGHTING" />
++    <setting file="file://$PROJECT_DIR$/nhs_handover/src/App.test.js" root0="FORCE_HIGHLIGHTING" />
++  </component>
+   <component name="ProjectId" id="22GsGmq5eiJaU7v4TVgMl6wLPji" />
++  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+   <component name="ProjectViewState">
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
