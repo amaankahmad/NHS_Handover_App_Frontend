@@ -1,0 +1,81 @@
+/*FollowUpTask{*/
+/*    text-align: center;*/
+/*}*/
+
+#heading{
+    color:#21ACFA;
+    margin: 1% 5%;
+}
+
+#taskIcon{
+    position: fixed;
+    right: 2%;
+}
+
+#containerZero{
+    position: fixed;
+    top: 5%;
+}
+
+#containerOne{
+    position: fixed;
+    background:#ABDEFB;
+    top: 15%;
+    width: 80%;
+    height: 10%;
+    left: 10%;
+}
+
+#Priority{
+    position:fixed;
+    left: 50%;
+}
+
+#wardNumber{
+    position: fixed;
+    right: 10%;
+}
+
+#taskType {
+    position: fixed;
+    color: black;
+    top: 27%;
+    width: 79%;
+    height: 10%;
+    left: 10%;
+    background-color: #21ACFA;
+    border-radius: .5%;
+}
+
+#containerThree{
+    position: fixed;
+    background: #DDEFFA;
+    top: 39%;
+    width: 80%;
+    height: 10%;
+    left: 10%;
+}
+
+#containerFour{
+    position: fixed;
+    color: black;
+    background: #DDEFFA;
+    top: 51%;
+    width: 80%;
+    height:25%;
+    left: 10%;
+}
+
+
+
+#AddTask {
+    position: fixed;
+    top: 80%;
+    left:45%;
+    height: 40px;
+    width: 10%;
+    color: white;
+    border-color: #21ACFA;
+    background-color: DodgerBlue;
+    border-radius: 2px;
+}

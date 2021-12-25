@@ -10,6 +10,7 @@ import Signup from "./SignUp/Signup";
 import NewTask from "./NewTask/NewTask";
 import Handover from "./Handover/Handover";
 import ForgotPassword from "./ForgotPassword/ForgotPass";
+import FollowUpTask from "./FollowUpTask/FollowUpTask";
 
 
 
@@ -20,6 +21,7 @@ ReactDOM.render(
         <NewTask />
         <Handover />
         <ForgotPassword/>
+        <FollowUpTask />
     </Router>,
     // React.createElement("h1",null,"Login Page"),
     //<React.StrictMode>

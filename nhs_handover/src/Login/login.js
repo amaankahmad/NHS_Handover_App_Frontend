@@ -32,7 +32,7 @@ function Main(){
 
             {/*<section style={{backgroundColor:'lightskyblue'}}>*/}
 
-            <p>NHS ID: <input type="text" onChange={getData}/></p>
+            <p>NHS Email: <input type="email" onChange={getData}/></p>
             <p>Password: <input type="password"/></p>
 
         {/*</section>*/}

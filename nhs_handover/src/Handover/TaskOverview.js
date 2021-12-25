@@ -1,8 +1,14 @@
 import './HandoverScreen.css';
 import {Button} from "react-bootstrap";
+import {Routes, Route} from "react-router-dom";
+import { useNavigate } from 'react-router';
 
 export default function TaskOverview() {
 
+    let navigate = useNavigate();
+   function handleClickFollowUp() {
+       navigate('/FollowUpTask')
+    }
     return (
         <>
             <div className="row" style={{margin: "10px"}}>
@@ -47,7 +53,7 @@ export default function TaskOverview() {
                         <p className="col-md-3" style={{textAlign: "left"}}> - Bloods Taken </p>
                         <p className="col-md-3" style={{textAlign: "left"}}> - Diabetic (Type 2) </p>
                         <p className="col-md-1" style={{textAlign: "center"}}> </p>
-                        <button className="col-md-1" style={{textAlign: "center", background: "lightgrey"}}>Add follow-up</button>
+                        <button className="col-md-1" onClick={handleClickFollowUp} style={{textAlign: "center", background: "lightgrey"}}>Add follow-up</button>
                         <p className="col-md-1" style={{textAlign: "center"}}> </p>
                         <button className="col-md-1" style={{textAlign: "center", background: "lightgreen"}}>Task Done</button>
                         <p className="col-md-1" style={{textAlign: "center"}}> </p>
