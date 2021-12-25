@@ -21,7 +21,7 @@ function Header(props){
 
 function Main(){
 
-    const [data,setData]=useState(null)
+    const [,setData]=useState(null)
     function getData(val)
     {
         setData(val.target.value)

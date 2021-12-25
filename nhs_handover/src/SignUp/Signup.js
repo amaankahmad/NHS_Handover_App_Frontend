@@ -1,11 +1,11 @@
 import React from "react";
-import logo from '../logo.svg';
+// import logo from '../logo.svg';
 import NHS from '../Asset/NHS.png';
 import signup from '../Asset/signup.png';
 import doc from '../Asset/doc.png';
 import doc2 from '../Asset/doc2.png';
 import './Signup.css';
-import ReactDOM from "react-dom";
+// import ReactDOM from "react-dom";
 import {Routes, Route} from "react-router-dom";
 import { useNavigate } from 'react-router';
 

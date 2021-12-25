@@ -1,15 +1,15 @@
-import React, { Component } from "react";
-import ReactDOM from "react-dom";
+// import React, { Component } from "react";
+// import ReactDOM from "react-dom";
 import "../index.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
-import DropdownButton from 'react-bootstrap/DropdownButton';
+// import DropdownButton from 'react-bootstrap/DropdownButton';
 import Dropdown from 'react-bootstrap/Dropdown';
-import { Checkbox } from 'react-bootstrap';
+// import { Checkbox } from 'react-bootstrap';
 import './NewTask.css';
 import DateTime from './DateTime'
 import taskIcon from '../Asset/taskIcon.png';
 import {Routes, Route} from "react-router-dom";
-import { useNavigate } from 'react-router';
+// import { useNavigate } from 'react-router';
 
 
 

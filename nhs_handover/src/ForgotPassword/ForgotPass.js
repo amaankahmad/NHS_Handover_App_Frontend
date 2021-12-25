@@ -2,8 +2,8 @@ import "../index.css"
 import React from "react";
 import {Routes, Route} from "react-router-dom";
 import "./ForgotPassword.css" ;
-import signup from "../Asset/signup.png";
-import NHS from "../Asset/NHS.png";
+// import signup from "../Asset/signup.png";
+// import NHS from "../Asset/NHS.png";
 import {useNavigate} from 'react-router';
 
 function MainForgotPass() {
