@@ -2,7 +2,7 @@ NewTask{
     text-align: center;
 }
 
-#taskIcon{
+#taskIconN{
     position: fixed;
     right: 30px;
 }
@@ -20,23 +20,23 @@ NewTask{
     color: white;
 }
 
-#containerZero{
+#containerZeroN{
     position: fixed;
     top: 65px;
     right: 5px;
 }
 
-#containerOne{
+#containerOneN{
     position: relative;
     top: 25px;
 }
 
-#containerTwo{
+#containerTwoN{
     position: relative;
     top: 25px;
 }
 
-#containerThree{
+#containerThreeN{
     position: relative;
     top: 25px;
 }
@@ -46,7 +46,7 @@ NewTask{
     top: 25px;
 }
 
-#taskType {
+#taskTypeN {
     position: relative;
     width: 1110px;
     color: black;
@@ -55,7 +55,7 @@ NewTask{
     border-radius: 2px;
 }
 
-#AddTask {
+#AddTaskN {
     position: relative;
     top: 25px;
     left:45%;
