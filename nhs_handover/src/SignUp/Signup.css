@@ -43,7 +43,7 @@ Signup {
     border-width: 0.1px;
     position: fixed;
     right: 5%;
-    /*Percentage used because not all sceens have the same size*/
+    /*Percentage used because not all screens have the same size*/
     top: 2%;
 }
 #signupLogo {

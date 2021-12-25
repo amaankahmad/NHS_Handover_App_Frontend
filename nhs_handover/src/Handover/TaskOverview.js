@@ -10,13 +10,13 @@ export default function TaskOverview() {
     return (
         <>
             <div className="row" style={{margin: "10px"}}>
-                <div className="col-md-1" style={{marginTop: "25px"}}>
+                <div className="col" style={{marginTop: "25px"}}>
                     Priority
                 </div>
-                <div className="col-md-8" style={{marginTop: "25px"}}>
+                <div className="col" style={{marginTop: "25px"}}>
                     Title
                 </div>
-                <div className="col-md-1" style={{marginTop: "25px"}}>
+                <div className="col" style={{marginTop: "25px"}}>
                     Location
                 </div>
             </div>
