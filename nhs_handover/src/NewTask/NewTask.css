@@ -2,65 +2,150 @@ NewTask{
     text-align: center;
 }
 
-#taskIconN{
-    position: fixed;
-    right: 30px;
+#headingN{
+    color:#21ACFA;
+    left:10%;
+    z:1;
 }
 
+#taskIconN{
+    position: fixed;
+    right: 2%;
+}
 
-
-.patientName {
-    background-color: LightSkyBlue;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+#resizedTextboxN {
+    width: 15%;
+    height: 5%;
 }
 
 #containerZeroN{
     position: fixed;
-    top: 65px;
-    right: 5px;
+    right: 1%;
 }
 
 #containerOneN{
-    position: relative;
-    top: 25px;
+    position: fixed;
+    left:10%;
+    height: 25%;
+    width: 80%;
+    top: 25%;
+    background-color: #ABDEFB;
+    /*display: grid;*/
+    /*grid-template-columns: auto auto ;*/
 }
 
-#containerTwoN{
-    position: relative;
-    top: 25px;
+#patientNameN{
+    position: fixed;
+    left:15%;
+    height: 10%;
+    top: 30%;
+    width: 5%;
 }
 
-#containerThreeN{
-    position: relative;
-    top: 25px;
+#MRNNumberN{
+    position: fixed;
+    right:15%;
+    height: 10%;
+    top: 30%;
+    /*display: grid;*/
+    /*grid-template-columns: auto auto auto ;*/
 }
 
-#containerFour{
-    position: relative;
-    top: 25px;
+#wardNumberN{
+    position: fixed;
+    left:15%;
+    height: 10%;
+    top: 35%;
+    /*display: grid;*/
+    /*grid-template-columns: auto auto auto ;*/
+}
+
+#DOBN{
+    position: fixed;
+    right:15%;
+    height: 10%;
+    top: 35%;
+}
+
+#sexN{
+    position: fixed;
+    left:15%;
+    height: 10%;
+    top: 40%;
+    width: 20%;
+}
+
+#femaleN{
+    position: fixed;
+    left:10%;
+    top: 41%;
+}
+#femaleLabelN{
+    position: fixed;
+    left:20%;
+    top: 40%;
+}
+
+#maleN{
+    position: fixed;
+    left:15%;
+    top: 41%;
+}
+
+#maleLabelN{
+    position: fixed;
+    left:25%;
+    top: 40%;
+}
+
+
+#priorityN{
+    position: fixed;
+    right:30%;
+    height: 10%;
+    top: 40%;
+    width: 20%;
 }
 
 #taskTypeN {
-    position: relative;
-    width: 1110px;
+    position: fixed;
+    left:10%;
+    height: 10%;
+    width: 80%;
     color: black;
-    top: 0px;
     background-color: LightSkyBlue;
-    border-radius: 2px;
+    border-radius: 1%;
+    top: 50%;
+
 }
 
+
+#containerThreeN{
+    position: fixed;
+    left:10%;
+    height: 10%;
+    width: 80%;
+    top: 65%;
+    background-color: #DDEFFA;
+    display: grid;
+}
+
+#containerFourN{
+    position: fixed;
+    left:10%;
+    height: 10%;
+    width: 80%;
+    top: 80%;
+    background-color: #DDEFFA;
+}
+
+
 #AddTaskN {
-    position: relative;
-    top: 25px;
-    left:45%;
-    height: 40px;
-    width: 150px;
+    position: fixed;
+    left:10%;
+    height: 10%;
+    width: 30%;
+    top: 90%;
     color: white;
     border-color: LightSkyBlue;
     background-color: DodgerBlue;
