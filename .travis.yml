@@ -4,6 +4,13 @@ notifications:
       - is419@ic.ac.uk
 
 language: node_js
+
+node_js:
+  -16.13.1
+  
+  npm test
+  make test
+
 deploy:
 provider: heroku
 api_key: 4cf47c69-983c-476a-b952-734761af0640
