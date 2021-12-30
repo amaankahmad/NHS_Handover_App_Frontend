@@ -7,7 +7,7 @@ language: node_js
 
 node_js:
   -16.13.1
-  
+
   npm test
   make test
 
