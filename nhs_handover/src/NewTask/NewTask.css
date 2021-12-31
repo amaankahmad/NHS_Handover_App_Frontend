@@ -28,7 +28,7 @@ NewTask{
     left:10%;
     height: 25%;
     width: 80%;
-    top: 25%;
+    top: 20%;
     background-color: #ABDEFB;
     /*display: grid;*/
     /*grid-template-columns: auto auto ;*/
@@ -38,7 +38,7 @@ NewTask{
     position: fixed;
     left:15%;
     height: 10%;
-    top: 30%;
+    top: 25%;
     width: 5%;
 }
 
@@ -46,7 +46,7 @@ NewTask{
     position: fixed;
     right:15%;
     height: 10%;
-    top: 30%;
+    top: 25%;
     /*display: grid;*/
     /*grid-template-columns: auto auto auto ;*/
 }
@@ -55,7 +55,7 @@ NewTask{
     position: fixed;
     left:15%;
     height: 10%;
-    top: 35%;
+    top: 30%;
     /*display: grid;*/
     /*grid-template-columns: auto auto auto ;*/
 }
@@ -64,59 +64,86 @@ NewTask{
     position: fixed;
     right:15%;
     height: 10%;
-    top: 35%;
+    top: 30%;
 }
 
 #sexN{
     position: fixed;
     left:15%;
     height: 10%;
-    top: 40%;
-    width: 20%;
-}
-
-#femaleN{
-    position: fixed;
-    left:10%;
-    top: 41%;
-}
-#femaleLabelN{
-    position: fixed;
-    left:20%;
-    top: 40%;
+    top: 35%;
 }
 
 #maleN{
     position: fixed;
-    left:15%;
-    top: 41%;
+    left:21%;
+    top: 36%;
+    width: 2%;
 }
 
 #maleLabelN{
     position: fixed;
-    left:25%;
-    top: 40%;
+    left:20%;
+    top: 35%;
 }
+
+#femaleN{
+    position: fixed;
+    left:28%;
+    top: 36%;
+    width: 2%;
+}
+#femaleLabelN{
+    position: fixed;
+    left:27%;
+    top: 35%;
+}
+
 
 
 #priorityN{
     position: fixed;
-    right:30%;
+    left:61%;
     height: 10%;
-    top: 40%;
+    top: 35%;
     width: 20%;
+}
+
+#urgentN{
+    position: fixed;
+    left:71%;
+    top: 36%;
+    width: 2%;
+}
+
+#urgentLabelN{
+    position: fixed;
+    left:67%;
+    top: 35%;
+}
+
+#nonUrgentN{
+    position: fixed;
+    left:82%;
+    top: 36%;
+    width: 2%;
+}
+
+#nonUrgentLabelN{
+    position: fixed;
+    left:76%;
+    top: 35%;
 }
 
 #taskTypeN {
     position: fixed;
     left:10%;
     height: 10%;
-    width: 80%;
+    width: 79.5%;
     color: black;
     background-color: LightSkyBlue;
     border-radius: 1%;
-    top: 50%;
-
+    top: 47%;
 }
 
 
@@ -125,10 +152,58 @@ NewTask{
     left:10%;
     height: 10%;
     width: 80%;
-    top: 65%;
+    top: 59%;
     background-color: #DDEFFA;
     display: grid;
 }
+
+#seniority{
+
+}
+
+#juniorN{
+
+}
+
+#juniorLabelN{
+
+}
+
+#SHON{
+
+}
+
+#SHOLabelN{
+
+}
+
+#consultantN{
+
+}
+
+#consultantLabelN{
+
+}
+
+#covidStatus{
+
+}
+
+#positiveN{
+
+}
+
+#positiveLabelN{
+
+}
+
+#negativeN{
+
+}
+
+#negativeLabelN
+
+
 
 #containerFourN{
     position: fixed;

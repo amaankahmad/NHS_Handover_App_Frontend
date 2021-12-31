@@ -39,18 +39,18 @@ function NewTask() {
                         <div id="DOBN"><input type="text" placeholder={"DOB"}/></div>
                         <div id="sexN">
                             Sex :
-                            <input type="checkbox" id="femaleN" name="F"/>
-                            <label htmlFor="female" id="femaleLabelN">F </label>
                             <input type="checkbox" id="maleN" name="M"/>
                             <label htmlFor="maleN" id="maleLabelN">M</label>
+                            <input type="checkbox" id="femaleN" name="F"/>
+                            <label htmlFor="female" id="femaleLabelN">F </label>
                         </div>
 
                         <div id="priorityN">
                             Priority :
-                            <input type="checkbox" id="HighN" name="High"/>
-                            <label htmlFor="High">High </label>
-                            <input type="checkbox" id="LowN" name="Low"/>
-                            <label htmlFor="Low">Low </label>
+                            <input type="checkbox" id="urgentN" name="Urgent"/>
+                            <label htmlFor="High" id="urgentLabelN">Urgent </label>
+                            <input type="checkbox" id="nonUrgentN" name="Non-Urgent"/>
+                            <label htmlFor="Low" id="nonUrgentLabelN">Non-Urgent </label>
                         </div>
                     </div>
 
@@ -70,27 +70,25 @@ function NewTask() {
                     <div id="containerThreeN" className="container">
                         <div className="row">
 
-                            <div className="col-6">
+                            <div id="seniority">
                                 {"\t"} Seniority  :  {"\t"}
-                                <input type="checkbox" id="JuniorN" name="Junior"/>
-                                <label htmlFor="Junior">Junior{"\t"} </label>
+                                <input type="checkbox" id="juniorN" name="Junior"/>
+                                <label htmlFor="Junior" id="juniorLabelN">Junior{"\t"} </label>
                                 {"\t"}
                                 <input type="checkbox" id="SHON" name="SHO"/>
-                                <label htmlFor="SHO">SHO {"\t"}</label>
+                                <label htmlFor="SHO" id="SHOLabelN">SHO {"\t"}</label>
                                 {"\t"}
-                                <input type="checkbox" id="ConsultantN" name="Consultant"/>
-                                <label htmlFor="Consultant">Consultant {"\t"} </label>
+                                <input type="checkbox" id="consultantN" name="Consultant"/>
+                                <label htmlFor="Consultant" id="consultantLabelN">Consultant {"\t"} </label>
                                 {"\t"}
                             </div>
 
-                            <div className="col-4">
-                                {"\t"} {"\t"} Covid Status  :  {"\t"}
-                                <input type="checkbox" style={{marginRight:"2px"}} id="PositiveN" name="Positive"/>
-                                <label htmlFor="Positive" style={{paddingLeft:"0px"}}>Positive {"\t"}</label>
+                            <div id="covidStatus">Covid Status  :</div>
+                                <input type="checkbox" id="positiveN" name="Positive"/>
+                                <label htmlFor="Positive" id="positiveLabelN">Red {"\t"}</label>
                                 {"\t"}
-                                <input type="checkbox" style={{marginRight:"0px", paddingLeft:"0px"}} id="NegativeN" name="Negative"/>
-                                <label htmlFor="Negative" style={{paddingLeft:"2px"}}>Negative  </label>
-                            </div>
+                                <input type="checkbox" id="negativeN" name="Negative"/>
+                                <label htmlFor="Negative" id="negativeLabelN">Blue  </label>
                             <div className="col-4" style={{margin: "10px 0" ,paddingLeft: "00px"}}> <input type="text" placeholder={"Schedule"}/></div>
                         </div>
                     </div>
