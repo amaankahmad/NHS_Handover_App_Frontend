@@ -84,12 +84,12 @@ function NewTask() {
                             </div>
 
                             <div id="covidStatus">Covid Status  :</div>
-                                <input type="checkbox" id="positiveN" name="Positive"/>
-                                <label htmlFor="Positive" id="positiveLabelN">Red {"\t"}</label>
+                                <input type="checkbox" id="redN" name="redN"/>
+                                <label htmlFor="redN" id="redLabelN">Red {"\t"}</label>
                                 {"\t"}
-                                <input type="checkbox" id="negativeN" name="Negative"/>
-                                <label htmlFor="Negative" id="negativeLabelN">Blue  </label>
-                            <div className="col-4" style={{margin: "10px 0" ,paddingLeft: "00px"}}> <input type="text" placeholder={"Schedule"}/></div>
+                                <input type="checkbox" id="blueN" name="blueN"/>
+                                <label htmlFor="blueN" id="blueLabelN">Blue  </label>
+                            <div id="scheduleN" > <input type="text" placeholder={"Schedule"}/></div>
                         </div>
                     </div>
 

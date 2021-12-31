@@ -158,50 +158,88 @@ NewTask{
 }
 
 #seniority{
-
+    position: fixed;
+    left:10%;
+    top: 62%;
 }
 
 #juniorN{
-
+    position: fixed;
+    left:20%;
+    top: 63%;
+    width: 2%;
 }
 
 #juniorLabelN{
-
+    position: fixed;
+    left:17%;
+    top: 62%;
 }
 
 #SHON{
-
+    position: fixed;
+    left:25%;
+    top: 63%;
+    width: 2%;
 }
 
 #SHOLabelN{
-
+    position: fixed;
+    left:23%;
+    top: 62%;
 }
 
 #consultantN{
-
+    position: fixed;
+    left:34%;
+    top: 63%;
+    width: 2%;
 }
 
 #consultantLabelN{
-
+    position: fixed;
+    left:28.5%;
+    top: 62%;
 }
 
 #covidStatus{
-
+    position: fixed;
+    left:40%;
+    top: 62%;
 }
 
-#positiveN{
-
+#redN{
+    position: fixed;
+    left:52%;
+    top: 63%;
+    width: 2%;
 }
 
-#positiveLabelN{
-
+#redLabelN{
+    position: fixed;
+    left:49%;
+    top: 62%;
 }
 
-#negativeN{
-
+#blueN{
+    position: fixed;
+    left:58%;
+    top: 63%;
+    width: 2%;
 }
 
-#negativeLabelN
+#blueLabelN{
+    position: fixed;
+    left:55%;
+    top: 62%;
+}
+
+#scheduleN{
+    position: fixed;
+    right:32%;
+    top: 62%;
+    width: 5%;
+}
 
 
 
