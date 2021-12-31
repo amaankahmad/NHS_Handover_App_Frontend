@@ -246,19 +246,19 @@ NewTask{
 #containerFourN{
     position: fixed;
     left:10%;
-    height: 10%;
+    height: 15%;
     width: 80%;
-    top: 80%;
+    top: 71%;
     background-color: #DDEFFA;
 }
 
 
 #AddTaskN {
     position: fixed;
-    left:10%;
+    left:35%;
     height: 10%;
     width: 30%;
-    top: 90%;
+    top: 88%;
     color: white;
     border-color: LightSkyBlue;
     background-color: DodgerBlue;

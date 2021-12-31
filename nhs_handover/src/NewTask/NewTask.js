@@ -96,10 +96,6 @@ function NewTask() {
                     <div id="containerFourN" className="container">
                         <p/>
                         Additional Notes
-                        <p/>
-                        -<p/>
-                        -<p/>
-                        -<p/>
                     </div>
                     <button id="AddTaskN">
                         Add Task
