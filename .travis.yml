@@ -1,0 +1,15 @@
+notifications:
+  email:
+    recipients:
+      - is419@ic.ac.uk
+
+language: node_js
+
+  npm test
+  make test
+
+deploy:
+provider: heroku
+api_key: 4cf47c69-983c-476a-b952-734761af0640
+app: nhs-handover-app-frontend
+skip_cleanup: true
