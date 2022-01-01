@@ -10,7 +10,7 @@ export default function TaskOverview() {
        navigate('/FollowUpTask')
     }
     return (
-        <>
+        <>  <div className="envelop" style={{border:"2px solid grey" , borderBottom:"none"}}>
             <div className="row" style={{margin: "10px"}}>
                 <div className="col-md-1" style={{marginTop: "25px"}}>
                     Priority
@@ -23,7 +23,7 @@ export default function TaskOverview() {
                 </div>
             </div>
 
-            <div className="row" style={{background: "#C4C4C4", marginLeft: "25px", marginRight: "25px"}}>
+            <div className="row" style={{background: "#C4C4C4", borderBottom:"2px solid grey",  marginLeft: "0px"}}>
                 <>
                 <h5 style={{textAlign: "left", margin:"10px", fontWeight: "bold"}}>Description</h5>
                 <div className="row">
@@ -60,6 +60,7 @@ export default function TaskOverview() {
                     </div>
                 </div>
                 </>
+            </div>
             </div>
         </>
     );
