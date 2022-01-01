@@ -5,10 +5,8 @@ notifications:
 
 language: node_js
 
-  npm test
-  make test
-
 deploy:
+  npm test
 provider: heroku
 api_key: 4cf47c69-983c-476a-b952-734761af0640
 app: nhs-handover-app-frontend
