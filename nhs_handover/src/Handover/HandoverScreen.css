@@ -48,3 +48,39 @@
   transform: translateX(-50%);
   text-align: center;
 }
+
+#welcomeName {
+  position: fixed;
+  left: 3%;
+  top:  1%;
+}
+
+#dateTimeImg {
+  position: fixed;
+  top:  2%;
+  left: 90%;
+}
+
+#dateTime {
+  position: fixed;
+  right: 5%;
+  /*Percentage used because not all screens have the same size*/
+  top: 100px;
+}
+
+#pageTitle {
+  padding: 20px;
+}
+
+
+#tasksBox {
+  position: absolute;
+  top: 30%;
+  text-align: center;
+  background-color: LightSkyBlue;
+  margin: 50px;
+}
+
+#prioritySeparation {
+  right: 10%;
+}

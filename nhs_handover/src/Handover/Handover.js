@@ -4,8 +4,6 @@ import WelcomeBanner from "./WelcomeBanner";
 import PageTitle from "./PageTitle";
 import TasksBox from "./TasksBox";
 import {Routes, Route} from "react-router-dom";
-import { useNavigate } from 'react-router';
-
 
 function Handover() {
     return (

@@ -4,12 +4,12 @@ import './HandoverScreen.css';
 // This will be linked with the model to obtain the MyTasks vs AllTasks and switch between pages
 
 export default function BottomNavbar({role}) {
-    var secondButton = false;
-    var firstButtonText = 'My Tasks';
+    // var secondButton = false;
+    // var firstButtonText = 'My Tasks';
 
 
     if (role === 'SHO') {
-        secondButton = true;
+        // secondButton = true;
     }
 
     return (

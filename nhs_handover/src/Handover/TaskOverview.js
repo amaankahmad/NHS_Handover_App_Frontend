@@ -1,6 +1,4 @@
 import './HandoverScreen.css';
-import {Button} from "react-bootstrap";
-import {Routes, Route} from "react-router-dom";
 import { useNavigate } from 'react-router';
 
 export default function TaskOverview() {
@@ -12,13 +10,13 @@ export default function TaskOverview() {
     return (
         <>  <div className="envelop" style={{border:"2px solid grey" , borderBottom:"none"}}>
             <div className="row" style={{margin: "10px"}}>
-                <div className="col-md-1" style={{marginTop: "25px"}}>
+                <div className="col" style={{marginTop: "25px"}}>
                     Priority
                 </div>
-                <div className="col-md-8" style={{marginTop: "25px"}}>
+                <div className="col" style={{marginTop: "25px"}}>
                     Title
                 </div>
-                <div className="col-md-1" style={{marginTop: "25px"}}>
+                <div className="col" style={{marginTop: "25px"}}>
                     Location
                 </div>
             </div>

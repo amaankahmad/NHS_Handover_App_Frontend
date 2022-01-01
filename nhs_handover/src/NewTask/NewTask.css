@@ -2,65 +2,263 @@ NewTask{
     text-align: center;
 }
 
-#taskIconN{
-    position: fixed;
-    right: 30px;
+#headingN{
+    color:#21ACFA;
+    left:10%;
+    z:1;
 }
 
+#taskIconN{
+    position: fixed;
+    right: 2%;
+}
 
-
-.patientName {
-    background-color: LightSkyBlue;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+#resizedTextboxN {
+    width: 15%;
+    height: 5%;
 }
 
 #containerZeroN{
     position: fixed;
-    top: 65px;
-    right: 5px;
+    right: 1%;
 }
 
 #containerOneN{
-    position: relative;
-    top: 25px;
+    position: fixed;
+    left:10%;
+    height: 25%;
+    width: 80%;
+    top: 20%;
+    background-color: #ABDEFB;
+    /*display: grid;*/
+    /*grid-template-columns: auto auto ;*/
 }
 
-#containerTwoN{
-    position: relative;
-    top: 25px;
+#patientNameN{
+    position: fixed;
+    left:15%;
+    height: 10%;
+    top: 25%;
+    width: 5%;
 }
 
-#containerThreeN{
-    position: relative;
-    top: 25px;
+#MRNNumberN{
+    position: fixed;
+    right:15%;
+    height: 10%;
+    top: 25%;
+    /*display: grid;*/
+    /*grid-template-columns: auto auto auto ;*/
 }
 
-#containerFour{
-    position: relative;
-    top: 25px;
+#wardNumberN{
+    position: fixed;
+    left:15%;
+    height: 10%;
+    top: 30%;
+    /*display: grid;*/
+    /*grid-template-columns: auto auto auto ;*/
+}
+
+#DOBN{
+    position: fixed;
+    right:15%;
+    height: 10%;
+    top: 30%;
+}
+
+#sexN{
+    position: fixed;
+    left:15%;
+    height: 10%;
+    top: 35%;
+}
+
+#maleN{
+    position: fixed;
+    left:21%;
+    top: 36%;
+    width: 2%;
+}
+
+#maleLabelN{
+    position: fixed;
+    left:20%;
+    top: 35%;
+}
+
+#femaleN{
+    position: fixed;
+    left:28%;
+    top: 36%;
+    width: 2%;
+}
+#femaleLabelN{
+    position: fixed;
+    left:27%;
+    top: 35%;
+}
+
+
+
+#priorityN{
+    position: fixed;
+    left:61%;
+    height: 10%;
+    top: 35%;
+    width: 20%;
+}
+
+#urgentN{
+    position: fixed;
+    left:71%;
+    top: 36%;
+    width: 2%;
+}
+
+#urgentLabelN{
+    position: fixed;
+    left:67%;
+    top: 35%;
+}
+
+#nonUrgentN{
+    position: fixed;
+    left:82%;
+    top: 36%;
+    width: 2%;
+}
+
+#nonUrgentLabelN{
+    position: fixed;
+    left:76%;
+    top: 35%;
 }
 
 #taskTypeN {
-    position: relative;
-    width: 1110px;
+    position: fixed;
+    left:10%;
+    height: 10%;
+    width: 79.5%;
     color: black;
-    top: 0px;
     background-color: LightSkyBlue;
-    border-radius: 2px;
+    border-radius: 1%;
+    top: 47%;
 }
 
+
+#containerThreeN{
+    position: fixed;
+    left:10%;
+    height: 10%;
+    width: 80%;
+    top: 59%;
+    background-color: #DDEFFA;
+    display: grid;
+}
+
+#seniority{
+    position: fixed;
+    left:10%;
+    top: 62%;
+}
+
+#juniorN{
+    position: fixed;
+    left:20%;
+    top: 63%;
+    width: 2%;
+}
+
+#juniorLabelN{
+    position: fixed;
+    left:17%;
+    top: 62%;
+}
+
+#SHON{
+    position: fixed;
+    left:25%;
+    top: 63%;
+    width: 2%;
+}
+
+#SHOLabelN{
+    position: fixed;
+    left:23%;
+    top: 62%;
+}
+
+#consultantN{
+    position: fixed;
+    left:34%;
+    top: 63%;
+    width: 2%;
+}
+
+#consultantLabelN{
+    position: fixed;
+    left:28.5%;
+    top: 62%;
+}
+
+#covidStatus{
+    position: fixed;
+    left:40%;
+    top: 62%;
+}
+
+#redN{
+    position: fixed;
+    left:52%;
+    top: 63%;
+    width: 2%;
+}
+
+#redLabelN{
+    position: fixed;
+    left:49%;
+    top: 62%;
+}
+
+#blueN{
+    position: fixed;
+    left:58%;
+    top: 63%;
+    width: 2%;
+}
+
+#blueLabelN{
+    position: fixed;
+    left:55%;
+    top: 62%;
+}
+
+#scheduleN{
+    position: fixed;
+    right:32%;
+    top: 62%;
+    width: 5%;
+}
+
+
+
+#containerFourN{
+    position: fixed;
+    left:10%;
+    height: 15%;
+    width: 80%;
+    top: 71%;
+    background-color: #DDEFFA;
+}
+
+
 #AddTaskN {
-    position: relative;
-    top: 25px;
-    left:45%;
-    height: 40px;
-    width: 150px;
+    position: fixed;
+    left:35%;
+    height: 10%;
+    width: 30%;
+    top: 88%;
     color: white;
     border-color: LightSkyBlue;
     background-color: DodgerBlue;
