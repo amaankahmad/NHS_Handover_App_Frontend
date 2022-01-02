@@ -1,10 +1,26 @@
 import "../index.css"
 import React from "react";
 import {Routes, Route} from "react-router-dom";
+import handover_logo from "../Asset/handover_logo.jpeg";
+import imperial_logo from "../Asset/imperiallogo.png";
 import "./ForgotPassword.css" ;
-// import signup from "../Asset/signup.png";
-// import NHS from "../Asset/NHS.png";
+import signup from "../Asset/signup.png";
+import NHS from "../Asset/NHS.png";
 import {useNavigate} from 'react-router';
+
+function Header(props){
+    return(
+
+        <header>
+            <div className="header">
+            <img src={handover_logo} id="ourLogo" height={80} alt="logo"/>
+            <img src={imperial_logo} id="nhsLogo" height={80} alt="logo"/>
+            
+            </div>
+        </header>
+
+    )
+}
 
 function MainForgotPass() {
    let navigate = useNavigate() ;
@@ -12,16 +28,39 @@ function MainForgotPass() {
        navigate('/')
    }
     return (
-       <div id="BOX" >
-         <div id="sousBox" >
-           <div id = "ForgotPassword"> FORGOT PASSWORD? </div>
-         </div>
-           <div id ="text"> Please enter the email you would like your password reset information sent to </div>
-           <div id ="text2"> Enter email address: </div>
-           <div id="emailBox"> <input type="email" /> </div>
-           <button id = "request"> Request Reset Link </button>
-           <button id = "return" onClick = {backToLogin}> Return To LogIn page </button>
-       </div>
+
+<section id="signinForm">
+<div className="form-images">
+    <div id="form">
+        <div id="headerSignIn">
+            <h2> Forgot Password? </h2>
+        </div>
+
+
+        <div id="mainBoxL">
+
+            <div className="row">
+                <label>
+                    <b>Enter email address:</b>
+                </label>
+                <input type="email"></input>
+            </div>
+
+        <div id="actionButtons">
+            <button id="button1">
+                Request Reset Link
+            </button>
+
+            <button id="button2"  onClick={backToLogin}>
+            Return To LogIn page
+            </button>
+
+        </div>
+    
+        </div>
+    </div>
+</div>
+</section>
 );
 
 }
@@ -31,6 +70,7 @@ function ForgotPassword(){
         <div className={"ForgotPassword"}>
             <Routes>
                 <Route path="/ForgotPassword" element={ <>
+                    <Header />
                     <MainForgotPass />
                 </>}/>
             </Routes>

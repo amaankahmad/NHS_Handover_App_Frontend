@@ -14,7 +14,7 @@ export default function PageTitle({role}) {
 
     return (
         <div>
-            <h2 id="pageTitle" style={{color: '#21ACFA'}}>{res}</h2>
+            <h2 id="pageTitle" style={{color: '#21ACFA', left:'4%', position: 'relative'}}>{res}</h2>
         </div>
     )
 }

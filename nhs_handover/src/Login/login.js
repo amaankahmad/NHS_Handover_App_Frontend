@@ -11,9 +11,11 @@ function Header(props){
     return(
 
         <header>
-            <img src={handover_logo} id="ourLogo" height={80} alt="logo"/>
-            <img src={imperial_logo} id="nhsLogo" height={50} alt="logo"/>
-            <h1>Login Page</h1>
+            <div className="header">
+            <img src={handover_logo} id="ourLogo" height={100} alt="logo"/>
+            <img src={imperial_logo} id="nhsLogo" height={80} alt="logo"/>
+            
+            </div>
         </header>
 
     )
@@ -21,26 +23,12 @@ function Header(props){
 
 function Main(){
 
-    const [,setData]=useState(null)
+    const [data,setData]=useState(null)
     function getData(val)
     {
         setData(val.target.value)
         console.warn(val.target.value)
     }
-    return(
-        <div id = "mainBoxL">
-
-            {/*<section style={{backgroundColor:'lightskyblue'}}>*/}
-
-            <p>NHS Email: <input type="email" onChange={getData}/></p>
-            <p>Password: <input type="password"/></p>
-
-        {/*</section>*/}
-    </div>
-    )
-
-}
-function Footer(){
     let navigate = useNavigate();
     function handleClick() {
         navigate('/shift')
@@ -52,20 +40,61 @@ function Footer(){
         navigate('/kim')
     }
 
+    return(
+    <section id="signinForm">
+        <div className="form-images">
+            <div id="form">
+                <div id="headerSignIn">
+                    <h2> Login Page </h2>
+                </div>
+
+
+                <div id="mainBoxL">
+
+                    <div className="row">
+                        <label>
+                            <b>NHS Email:</b>
+                        </label>
+                        <input type="email" onChange={getData}/>
+                    </div>
+
+                    <div className="row">
+                        <label>
+                            <b>Password:</b>
+                        </label>
+                        <input type="password"></input>
+                    </div>
+
+
+
+                <div id="actionButtons">
+                    <button id="button1" onClick={handleClick}>
+                        Login
+                    </button>
+
+                    <button id="button2"  onClick={handleClick2}>
+                        Forgot Password
+                    </button>
+
+                    <button id="button3" onClick={handleClick3}  >
+                        Sign up
+                    </button>
+
+                </div>
+            
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    )
+
+}
+function Footer(){
 
     return(
 
         <footer>
-            <button id="button1" onClick={handleClick} style={{backgroundColor:'lightskyblue'}}>
-                Login
-            </button>
-            <button id="button2"  onClick={handleClick2}  style={{backgroundColor:'lightskyblue'}}>
-                Forgot Password
-            </button>
-            <p></p>
-            <button id="button3" onClick={handleClick3}  style={{backgroundColor:'lightskyblue'}}>
-                Sign up
-            </button>
         </footer>
     )
 }
@@ -73,8 +102,10 @@ function Header2(){
     return(
 
         <header>
+            <div className="header">
             <img src={handover_logo} id="ourLogo" height={80} alt="logo"/>
-            <img src={imperial_logo} id="nhsLogo" height={50} alt="logo"/>
+            <img src={imperial_logo} id="nhsLogo" height={80} alt="logo"/>
+            </div>
         </header>
 
     )
@@ -92,7 +123,7 @@ function Main2(){
         <section>
 <p></p>
             <div>
-            <button id="buttonSun" onClick={handleClick4} style={{backgroundColor:'lightskyblue'}}>
+            <button id="buttonSun" onClick={handleClick4} style={{backgroundColor:'White'}}>
                 <figure>
                 <img src={sun} height={180} alt="sun"/>
                     <figcaption>
@@ -100,7 +131,7 @@ function Main2(){
                     </figcaption>
                 </figure>
             </button>
-            <button id="buttonMoon" onClick={handleClick5} style={{backgroundColor:'lightskyblue'}}>
+            <button id="buttonMoon" onClick={handleClick5} style={{backgroundColor:'White'}}>
                 <figure>
                 <img src={moon} height={180} alt="moon"/>
                     <figcaption>
