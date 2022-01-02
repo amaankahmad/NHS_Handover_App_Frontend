@@ -94,8 +94,7 @@ function NewTask() {
                     </div>
 
                     <div id="containerFourN" className="container">
-                        <p/>
-                        Additional Notes
+                        <div id="additionalNotesN" > <input type="text" placeholder={"Additional Notes"}/></div>
                     </div>
                     <button id="AddTaskN">
                         Add Task
