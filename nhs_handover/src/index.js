@@ -6,7 +6,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import Login from './Login/login';
 import {BrowserRouter as Router} from "react-router-dom";
-import Signup from "./SignUp/Signup";
+import Signup from './SignUp/Signup';
 import NewTask from "./NewTask/NewTask";
 import Handover from "./Handover/Handover";
 import ForgotPassword from "./ForgotPassword/ForgotPass";
