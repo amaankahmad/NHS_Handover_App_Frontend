@@ -2,19 +2,20 @@ notifications:
   email:
     recipients:
       - is419@ic.ac.uk
+      - amaankahmad@gmail.com
 
 language: node_js
-
+node_js:
+  - "stable"
 cache:
   directories:
     - node_modules
-  script:
-    -npm test
-    -npm run build || true
-
+script:
+  - npm run build || true
+#  - npm test
 
 deploy:
-provider: heroku
-api_key: 4cf47c69-983c-476a-b952-734761af0640
-app: nhs-handover-app-frontend
-skip_cleanup: true
+  provider: heroku
+  api_key: 4cf47c69-983c-476a-b952-734761af0640
+  app: nhs-handover-app-frontend
+  skip_cleanup: true
