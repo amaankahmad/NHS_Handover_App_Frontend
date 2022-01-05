@@ -100,7 +100,7 @@ function Signup() {
     <div className="content">
       <Routes>
         <Route
-          path="/kim"
+          path="/SignUp"
           element={
             <>
               <HeaderSignUp />

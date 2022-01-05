@@ -9,11 +9,16 @@ import './NewTask.css';
 import DateTime from './DateTime'
 import taskIcon from '../Asset/taskIcon.png';
 import {Routes, Route} from "react-router-dom";
-// import { useNavigate } from 'react-router';
+import { useNavigate } from 'react-router';
+
 
 
 
 function NewTask() {
+    let navigate = useNavigate() ;
+    function returnToLogin(){
+        navigate('/shift')
+    }
     return(
         <div className={"NewTask"}>
             <Routes>
@@ -21,7 +26,7 @@ function NewTask() {
                     <div >
                         <h1 id="headingN" >
                             NEW TASK:
-                            <img src={taskIcon} id = "taskIconN" height ={50} alt ="taskIcon"/>
+                            <img src={taskIcon} id = "taskIconN" height ={75} alt ="taskIcon"/>
                         </h1>
 
                         <div id="containerZeroN" className="container">
@@ -73,7 +78,7 @@ function NewTask() {
                             <div id="seniority">
                                 {"\t"} Seniority  :  {"\t"}
                                 <input type="checkbox" id="juniorN" name="Junior"/>
-                                <label htmlFor="Junior" id="juniorLabelN">Junior{"\t"} </label>
+                                <label htmlFor="Junior" id="juniorLabelN">FY{"\t"} </label>
                                 {"\t"}
                                 <input type="checkbox" id="SHON" name="SHO"/>
                                 <label htmlFor="SHO" id="SHOLabelN">SHO {"\t"}</label>
@@ -99,6 +104,9 @@ function NewTask() {
                     </div>
                     <button id="AddTaskN">
                         Add Task
+                    </button>
+                    <button id="ReturnToLoginN" onClick={returnToLogin}>
+                        Done
                     </button>
                 </>}/>
             </Routes>

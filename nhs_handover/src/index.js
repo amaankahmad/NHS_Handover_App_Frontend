@@ -17,7 +17,7 @@ import FollowUpTask from "./FollowUpTask/FollowUpTask";
 ReactDOM.render(
     <Router>
         <Login/>
-   <Signup />
+        <Signup />
         <NewTask />
         <Handover />
         <ForgotPassword/>

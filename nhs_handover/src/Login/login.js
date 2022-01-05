@@ -37,7 +37,7 @@ function Main(){
         navigate('/ForgotPassword')
     }
     function handleClick3() {
-        navigate('/kim')
+        navigate('/Signup')
     }
 
     return(
@@ -103,7 +103,7 @@ function Header2(){
 
         <header>
             <div className="header">
-            <img src={handover_logo} id="ourLogo" height={80} alt="logo"/>
+            <img src={handover_logo} id="ourLogo" height={100} alt="logo"/>
             <img src={imperial_logo} id="nhsLogo" height={80} alt="logo"/>
             </div>
         </header>

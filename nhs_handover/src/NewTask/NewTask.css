@@ -5,22 +5,23 @@ NewTask{
 #headingN{
     color:#21ACFA;
     left:10%;
-    z:1;
 }
 
 #taskIconN{
     position: fixed;
     right: 2%;
+    top: 5%;
 }
 
 #resizedTextboxN {
     width: 15%;
-    height: 5%;
+    height: 3%;
 }
 
 #containerZeroN{
     position: fixed;
-    right: 1%;
+    top: 5%;
+    left: 13%;
 }
 
 #containerOneN{
@@ -68,35 +69,36 @@ NewTask{
 }
 
 #sexN{
-    position: fixed;
-    left:15%;
-    height: 10%;
-    top: 35%;
+    position: relative;
+    /*left:15%;*/
+    /*height: 10%;*/
+    top: 70%;
+    left: 5%;
 }
 
 #maleN{
     position: fixed;
     left:21%;
-    top: 36%;
+    top: 38%;
     width: 2%;
 }
 
 #maleLabelN{
     position: fixed;
-    left:20%;
-    top: 35%;
+    left:19%;
+    top: 37%;
 }
 
 #femaleN{
     position: fixed;
     left:28%;
-    top: 36%;
+    top: 38%;
     width: 2%;
 }
 #femaleLabelN{
     position: fixed;
-    left:27%;
-    top: 35%;
+    left:26%;
+    top: 37%;
 }
 
 
@@ -105,41 +107,41 @@ NewTask{
     position: fixed;
     left:61%;
     height: 10%;
-    top: 35%;
+    top: 37%;
     width: 20%;
 }
 
 #urgentN{
     position: fixed;
-    left:71%;
-    top: 36%;
+    left:72%;
+    top: 38%;
     width: 2%;
 }
 
 #urgentLabelN{
     position: fixed;
     left:67%;
-    top: 35%;
+    top: 37%;
 }
 
 #nonUrgentN{
     position: fixed;
-    left:82%;
-    top: 36%;
+    left:83%;
+    top: 38%;
     width: 2%;
 }
 
 #nonUrgentLabelN{
     position: fixed;
     left:76%;
-    top: 35%;
+    top: 37%;
 }
 
 #taskTypeN {
     position: fixed;
     left:10%;
     height: 10%;
-    width: 79.5%;
+    width: 79%;
     color: black;
     background-color: LightSkyBlue;
     border-radius: 1%;
@@ -172,7 +174,7 @@ NewTask{
 
 #juniorLabelN{
     position: fixed;
-    left:17%;
+    left:18.5%;
     top: 62%;
 }
 
@@ -185,7 +187,7 @@ NewTask{
 
 #SHOLabelN{
     position: fixed;
-    left:23%;
+    left:22.5%;
     top: 62%;
 }
 
@@ -204,7 +206,7 @@ NewTask{
 
 #covidStatus{
     position: fixed;
-    left:40%;
+    left:39%;
     top: 62%;
 }
 
@@ -260,7 +262,23 @@ NewTask{
     width: 30%;
     top: 88%;
     color: white;
-    border-color: LightSkyBlue;
+    font-size: large;
+    border-color: DodgerBlue;
     background-color: DodgerBlue;
-    border-radius: 2px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#ReturnToLoginN {
+    position: fixed;
+    left:79.25%;
+    height: 10%;
+    width: 10%;
+    top: 88%;
+    color: white;
+    font-size: large;
+    border-color: DodgerBlue;
+    background-color: DodgerBlue;
+    border-radius: 10px;
+    padding: 10px;
 }

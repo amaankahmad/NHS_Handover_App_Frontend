@@ -9,13 +9,18 @@ import './FollowUpTask.css';
 //import DateTime from './DateTime'
 //import taskIcon from './taskIcon.png';
 import {Routes, Route} from "react-router-dom";
-// import { useNavigate } from 'react-router';
+import { useNavigate } from 'react-router';
 import taskIcon from '../Asset/taskIcon.png';
 import DateTime from '../NewTask/DateTime';
 
 
 
 function FollowUpTask() {
+    let navigate = useNavigate() ;
+    function returnToList() {
+        navigate('/Handover')
+    }
+
     return(
         <div className={"FollowUpTask"}>
             <Routes>
@@ -23,7 +28,7 @@ function FollowUpTask() {
             <div >
                 <h1 id="heading">
                     FOLLOW UP TASK:
-                    <img src={taskIcon} id = "taskIcon" height ={50} alt ="taskIcon"/>
+                    <img src={taskIcon} id = "taskIcon" height ={75} alt ="taskIcon"/>
                 </h1>
 
                 <div id="containerZero" className="container">
@@ -95,6 +100,9 @@ function FollowUpTask() {
             <button id="AddTask">
                 Add Task
             </button>
+            <button onClick={returnToList} id = "ReturnToList">
+                Return to Tasks list
+             </button>
                     </>}/>
                 </Routes>
                     </div>

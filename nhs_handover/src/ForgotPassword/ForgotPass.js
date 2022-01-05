@@ -52,7 +52,7 @@ function MainForgotPass() {
             </button>
 
             <button id="button2"  onClick={backToLogin}>
-            Return To LogIn page
+            Return To Login page
             </button>
 
         </div>
