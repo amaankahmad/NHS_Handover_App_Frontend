@@ -119,6 +119,9 @@ function Main2(){
     function handleClick5() {
         navigate('/Handover')
     }
+    function handleClick6() {
+        navigate('/')
+    }
     return(
         <section>
 <p></p>
@@ -139,6 +142,9 @@ function Main2(){
                     </figcaption>
                 </figure>
             </button>
+                <button id="buttonSignOut" onClick={handleClick6}  >
+                    Sign out
+                </button>
             </div>
 
         </section>

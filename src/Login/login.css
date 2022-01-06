@@ -142,4 +142,17 @@ div.row {
     top: 20%;
 }
 
-
+#buttonSignOut {
+    position: fixed;
+    color: white;
+    width: 100%;
+    border-color: DodgerBlue;
+    background-color: DodgerBlue;
+    border-radius: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    width: 10%;
+    height: 5%;
+    top: 80%;
+    left: 45%;
+}
