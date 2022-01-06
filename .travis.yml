@@ -12,7 +12,6 @@ cache:
     - node_modules
 script:
   - npm run build || true
-  - gem install faraday -v 1.9.3
   - rvm $(travis_internal_ruby) --fuzzy do ruby -S gem install faraday -v 1.9.3
 #  - npm test
 
