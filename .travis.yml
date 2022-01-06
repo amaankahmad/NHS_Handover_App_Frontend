@@ -12,6 +12,7 @@ cache:
     - node_modules
 script:
   - npm run build || true
+  - gem install faraday -v 1.8.0
 #  - npm test
 
 deploy:
