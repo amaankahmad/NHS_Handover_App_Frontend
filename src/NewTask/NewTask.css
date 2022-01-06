@@ -23,7 +23,15 @@ NewTask{
     top: 5%;
     left: 13%;
 }
-
+#taskTypeN{
+    color: white;
+    font-size: large;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    position: center;
+    width: 79%;
+}
 #containerOneN{
     position: fixed;
     left:10%;

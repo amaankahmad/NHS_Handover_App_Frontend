@@ -2,7 +2,7 @@
 // import ReactDOM from "react-dom";
 //import "./index.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
-// import DropdownButton from 'react-bootstrap/DropdownButton';
+import DropdownButton from 'react-bootstrap/DropdownButton';
 import Dropdown from 'react-bootstrap/Dropdown';
 // import { Checkbox } from 'react-bootstrap';
 import './FollowUpTask.css';
@@ -12,6 +12,7 @@ import {Routes, Route} from "react-router-dom";
 import { useNavigate } from 'react-router';
 import taskIcon from '../Asset/taskIcon.png';
 import DateTime from '../NewTask/DateTime';
+import React from "react";
 
 
 
@@ -51,19 +52,16 @@ function FollowUpTask() {
                 </div>
             </div>
 
-            <div id="containerTwo" className="container">
-                <div className="btn-group dropdown">
-                    <button type="button" id="taskType" className="btn btn-secondary btn-lg dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Task Type
-                    </button>
-                    <div className="dropdown-menu">
-                        <Dropdown.Item href="#/action-1">Complete ECG</Dropdown.Item>
-                        <Dropdown.Item href="#/action-2">Complete X-RAY</Dropdown.Item>
-                        <Dropdown.Item href="#/action-3">Complete Clinical Review</Dropdown.Item>
-                    </div>
-                </div>
-            </div>
 
+            <div id="containerTwo" className="container">
+
+                    <select name="taskType" id="taskType" style={{width: "79%"}}>
+                        <option value="" disabled selected>Task Type</option>
+                        <option value="completeEcg">Complete ECG</option>
+                        <option value="completeXRay">Complete X-RAY</option>
+                        <option value="completeClinicalReview">Complete Clinical Review</option>
+                    </select>
+            </div>
             <div id="containerThree" className="container">
                 <div className="container" >
                     <div className="row">

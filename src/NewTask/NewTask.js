@@ -10,6 +10,7 @@ import DateTime from './DateTime'
 import taskIcon from '../Asset/taskIcon.png';
 import {Routes, Route} from "react-router-dom";
 import { useNavigate } from 'react-router';
+import React from "react";
 
 
 
@@ -60,16 +61,13 @@ function NewTask() {
                     </div>
 
                     <div id="containerTwoN" className="container">
-                        <div className="btn-group dropdown">
-                            <button type="button" id="taskTypeN" className="btn btn-secondary btn-lg dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Task Type
-                            </button>
-                            <div className="dropdown-menu">
-                                <Dropdown.Item href="#/action-1">Complete ECG</Dropdown.Item>
-                                <Dropdown.Item href="#/action-2">Complete X-RAY</Dropdown.Item>
-                                <Dropdown.Item href="#/action-3">Complete Clinical Review</Dropdown.Item>
-                            </div>
-                        </div>
+
+                        <select name="taskType" id="taskTypeN" >
+                            <option value="" disabled selected>Task Type</option>
+                            <option value="completeEcg">Complete ECG</option>
+                            <option value="completeXRay">Complete X-RAY</option>
+                            <option value="completeClinicalReview">Complete Clinical Review</option>
+                        </select>
                     </div>
 
                     <div id="containerThreeN" className="container">
