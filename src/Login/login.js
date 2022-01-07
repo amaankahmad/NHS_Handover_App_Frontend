@@ -6,6 +6,7 @@ import sun from "../Asset/sun.png";
 import moon from "../Asset/moon.png";
 import {Routes, Route} from "react-router-dom";
 import { useNavigate } from 'react-router';
+import ListPersonsComponent from "../ShowPersons/ListPersonsComponent";
 
 function Header(props){
     return(
@@ -163,8 +164,12 @@ function Login(){
             </>}/>
 
                 <Route path="/shift" element={ <>
-                    <Header2 />
-                    <Main2/>
+                    {/*<Header2 />*/}
+                    {/*<Main2/>*/}
+                    <div className="container">
+                        <Header2 />
+                        <ListPersonsComponent/>
+                    </div>
                 </>}/>
             </Routes>
         </div>

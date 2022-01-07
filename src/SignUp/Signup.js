@@ -7,6 +7,7 @@ import doc2 from "../Asset/doc2.jpg";
 import "./Signup.css";
 import { Routes, Route } from "react-router-dom";
 import { useNavigate } from "react-router";
+import CreateHospitalPersonnel from "./CreateHospitalPersonnel";
 
 function HeaderSignUp() {
   return (
@@ -25,70 +26,7 @@ function MainSignUp() {
   }
 
   return (
-    <section id="signupForm">
-      <div className="form-images1">
-        <div id="form">
-          <div id="headerSignUp">
-            <h2> Create a new profile: </h2>
-          </div>
-          <div id="mainBox">
-            <div className="row">
-              <label>
-                <b>Name:</b>
-              </label>
-              <input id="inputSignup" type="text"></input>
-            </div>
-            <div className="row">
-              <label>
-                <b>NHS ID:</b>
-              </label>
-              <input id="inputSignup" type="text"></input>
-            </div>
-            <div className="row">
-              <label>
-                <b>Email:</b>
-              </label>
-              <input id="inputSignup" type="email"></input>
-            </div>
-            <div className="row">
-              <label>
-                <b>Password:</b>
-              </label>
-              <input id="inputSignup" type="password"></input>
-            </div>
-            <div className="row">
-              <label>
-                <b>Confirm Password:</b>
-              </label>
-              <input id="inputSignup" type="password"></input>
-            </div>
-            <div className="row">
-              <label htmlFor="role">
-                <b>Role:</b>
-              </label>
-              <select name="role" id="role">
-                <option value="empty"></option>
-                <option value="JuniorDoctor">FY</option>
-                <option value="SHO">SHO</option>
-                <option value="Consultant">Spr/Cons</option>
-              </select>
-            </div>
-            <div id="actionButtons">
-              <button id="actionButton">Register</button>
-
-              <button id="actionButton" onClick={returnLogIn}>
-                Return to login page
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <div className="images">
-          <img src={doc2} id="docfemale" alt="docfemale" />
-          <img src={doc} id="docmale" alt="docmale" />
-        </div>
-      </div>
-    </section>
+      <CreateHospitalPersonnel />
   );
 }
 
