@@ -51,9 +51,9 @@ export default function TaskOverview() {
                         <p className="col-md-3" style={{textAlign: "left"}}> - Bloods Taken </p>
                         <p className="col-md-3" style={{textAlign: "left"}}> - Diabetic (Type 2) </p>
                         <p className="col-md-1" style={{textAlign: "center"}}> </p>
-                        <button className="col-md-1" onClick={handleClickFollowUp} style={{textAlign: "center", background: "lightgrey"}}>Add follow-up</button>
+                        <button id="followUpButton" className="col-md-1" onClick={handleClickFollowUp}>Add follow-up</button>
                         <p className="col-md-1" style={{textAlign: "center"}}> </p>
-                        <button className="col-md-1" style={{textAlign: "center", background: "lightgreen"}}>Task Done</button>
+                        <button id="taskDoneButton" className="col-md-1">Task Done</button>
                         <p className="col-md-1" style={{textAlign: "center"}}> </p>
                     </div>
                 </div>

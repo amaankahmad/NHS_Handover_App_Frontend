@@ -1,5 +1,4 @@
 import React from "react";
-import logo from "../logo.svg";
 import NHS from "../Asset/NHS.png";
 import signup from "../Asset/signup.png";
 import doc from "../Asset/doc.jpg";
@@ -73,10 +72,10 @@ function MainSignUp() {
                 <option value="Consultant">Spr/Cons</option>
               </select>
             </div>
-            <div id="actionButtons">
-              <button id="actionButton">Register</button>
+            <div id="actionButtonsSignUp">
+              <button id="actionButtonSignUp">Register</button>
 
-              <button id="actionButton" onClick={returnLogIn}>
+              <button id="actionButtonSignUp" onClick={returnLogIn}>
                 Return to login page
               </button>
             </div>

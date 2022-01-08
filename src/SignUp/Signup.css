@@ -46,7 +46,7 @@ Signup {
     margin-right: 30px;
   }
   
-  #actionButton {
+  #actionButtonSignUp {
     color: white;
     width: 100%;
     border-color: DodgerBlue;
@@ -57,7 +57,7 @@ Signup {
     margin-left: 10px;
   }
   
-  #actionButtons {
+  #actionButtonsSignUp {
     padding-top: 40px;
     display: flex;
     width: 100%;

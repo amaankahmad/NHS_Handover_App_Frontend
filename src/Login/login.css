@@ -102,7 +102,7 @@ div.row {
     padding-left: 0;
   }
 
-#actionButtons {
+#actionButtonsLogin {
     padding-top: 40px;
     display: flex;
     width: 100%;
@@ -145,7 +145,6 @@ div.row {
 #buttonSignOut {
     position: fixed;
     color: white;
-    width: 100%;
     border-color: DodgerBlue;
     background-color: DodgerBlue;
     border-radius: 10px;
