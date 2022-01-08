@@ -56,7 +56,7 @@ function NewTask() {
                       <input type="checkbox" id="maleN" name="M" />
                     </div>
                     <label htmlFor="female" id="femaleLabelN">
-                      P
+                      F
                       <input type="checkbox" id="femaleN" name="F" />
                     </label>
                   </div>

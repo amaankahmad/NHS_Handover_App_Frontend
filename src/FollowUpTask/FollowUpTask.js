@@ -40,7 +40,7 @@ function FollowUpTask() {
                 </div>
 
                 <div id="containerOne" >
-                    <div id="containerOneRight">
+                    <div id="containerOneLeft">
                         <div id="wardNumber">
                             <input
                                 type="text"
@@ -49,7 +49,7 @@ function FollowUpTask() {
                             />
                         </div>
                     </div>
-                    <div id="containerOneLeft">
+                    <div id="containerOneRight">
                         <div id="priority">
                             <p id="priorityLabel">Priority :</p>{" "}
                             <div className="checkLabel">

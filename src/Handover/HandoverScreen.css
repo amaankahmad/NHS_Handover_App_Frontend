@@ -107,3 +107,24 @@
   margin-left: 10px;
 }
 
+#welcomeBanner{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  align-items: center;
+  padding: 1rem;
+}
+
+#titleBanner{
+  font-size: 40px;
+  font-weight: 500;
+  position: relative;
+  color: #21acfa;
+}
+#taskIconW {
+  display: flex;
+}
+
+#taskIconImgW {
+  margin-left: 1rem;
+}
