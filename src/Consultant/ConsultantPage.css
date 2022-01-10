@@ -29,7 +29,9 @@
   margin-top: 3vh;
   width: 80vw;
   background-color: #abdefb;
+  /*background-color: dodgerblue;*/
   flex-wrap: wrap;
+  padding: 0vh;
   /*display: grid;*/
   /*grid-template-columns: auto auto ;*/
 }
@@ -61,9 +63,9 @@
   margin-left: auto;
   margin-right: auto;
   margin-top: 0vh;
-
   width: 75vw;
-  background-color: #b4ddf5;
+  /*background-color: #b4ddf5;*/
+  background-color: white;
   flex-wrap: wrap;
 }
 
@@ -120,7 +122,9 @@
   margin-top: 1vh;
   padding-bottom: 5vh;
   width: 80vw;
-  background-color: #b4ddf5;
+  /*background-color: dodgerblue;*/
+  /*background-color: #b4ddf5;*/
+  background-color: white;
   flex-wrap: wrap;
 }
 
@@ -138,7 +142,8 @@
   padding: 2rem;
   margin: 3rem;
   width: 75vw;
-  background-color: dodgerblue;
+  background-color: white;
+  /*background-color: dodgerblue;*/
   flex-wrap: wrap;
 }
 

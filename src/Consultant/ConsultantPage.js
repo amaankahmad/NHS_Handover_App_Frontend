@@ -55,7 +55,7 @@ function Consultant() {
                   <div id="containerA">
                     <div id="containerOneTopC">
                       <div id="patientNameC"> Patient Name: John Smith </div>
-                      <div id="MRNnumberC"> MRn Number: 74356891 </div>
+                      <div id="MRNnumberC"> MRN Number: 74356891 </div>
                       <div id="covidStatusC"> Covid Status: Blue </div>
                     </div>
 
@@ -90,7 +90,7 @@ function Consultant() {
                   <div id="containerA">
                     <div id="containerOneTopC">
                       <div id="patientNameC"> Patient Name: Martin Holloway </div>
-                      <div id="MRNnumberC1"> MRn Number: 745597591 </div>
+                      <div id="MRNnumberC1"> MRN Number: 745597591 </div>
                       <div id="covidStatusC"> Covid Status: Blue </div>
                     </div>
 
