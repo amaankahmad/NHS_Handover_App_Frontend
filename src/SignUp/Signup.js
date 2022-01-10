@@ -39,7 +39,7 @@ function MainSignUp() {
             </div>
             <div className="row">
               <label>
-                <b>NHS ID:</b>
+                <b>Pager Number:</b>
               </label>
               <input id="inputSignup" type="text"></input>
             </div>

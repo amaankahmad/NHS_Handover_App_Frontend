@@ -28,7 +28,7 @@ export default function TaskOverview() {
                     <p className="col-md-1" style={{textAlign: "center"}}> </p>
                     <p className="col-md-2" style={{textAlign: "center"}}>Name: John Smith</p>
                     <p className="col-md-2" style={{textAlign: "center"}}>MRN: 0782345643</p>
-                    <p className="col-md-2" style={{textAlign: "center"}}>NHS ID: 74329432</p>
+                    {/*<p className="col-md-2" style={{textAlign: "center"}}>NHS ID: 74329432</p>*/}
                     <p className="col-md-2" style={{textAlign: "center"}}>Age: 34 </p>
                     <p className="col-md-2" style={{textAlign: "center"}}>Covid status: Negative</p>
                     <p className="col-md-1" style={{textAlign: "center"}}> </p>
@@ -38,7 +38,7 @@ export default function TaskOverview() {
                     <p className="col-md-2" style={{textAlign: "center"}}>Sex: Male</p>
                     <p className="col-md-2" style={{textAlign: "center"}}>Time admitted: 15:20</p>
                     <p className="col-md-3" style={{textAlign: "center"}}>Department of admission: AMU</p>
-                    <p className="col-md-3" style={{textAlign: "center"}}>Task created by: Dr. Johnson</p>
+                    <p className="col-md-3" style={{textAlign: "center"}}>Task created by: Dr. Johnson [PagerNum: 1263] </p>
                     <p className="col-md-1" style={{textAlign: "center"}}> </p>
                 </div>
                 <div className="row">

@@ -11,7 +11,7 @@ import NewTask from "./NewTask/NewTask";
 import Handover from "./Handover/Handover";
 import ForgotPassword from "./ForgotPassword/ForgotPass";
 import FollowUpTask from "./FollowUpTask/FollowUpTask";
-
+import Consultant from "./Consultant/ConsultantPage";
 
 
 ReactDOM.render(
@@ -22,6 +22,7 @@ ReactDOM.render(
         <Handover />
         <ForgotPassword/>
         <FollowUpTask />
+        <Consultant />
     </Router>,
     // React.createElement("h1",null,"Login Page"),
     //<React.StrictMode>

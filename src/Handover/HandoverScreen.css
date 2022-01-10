@@ -39,12 +39,12 @@
 
 .bottom {
   position: absolute;
-  bottom: 50px;
+  bottom: 1000px;
 }
 
 .center {
   position: absolute;
-  left: 50%;
+  left: 85%;
   transform: translateX(-50%);
   text-align: center;
 }
