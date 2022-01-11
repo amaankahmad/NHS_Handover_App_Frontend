@@ -18,7 +18,7 @@ export default function WelcomeBanner({name}) {
                             id="taskIconImgW"
                         />
                     </div>
-                </div>
+    </div>
         </section>
     );
 }
