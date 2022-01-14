@@ -77,7 +77,7 @@
   position: absolute;
   top: 30%;
   text-align: center;
-  background-color: LightSkyBlue;
+  background-color: white;
   margin: 50px;
 }
 
@@ -90,6 +90,17 @@
   width: 100%;
   border-color: DodgerBlue;
   background-color: DodgerBlue;
+  border-radius: 10px;
+  padding: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+#archiveButton{
+  color: white;
+  width: 100%;
+  border-color: #f36357;
+  background-color: #f36357;
   border-radius: 10px;
   padding: 10px;
   margin-right: 10px;
@@ -137,10 +148,10 @@
   margin-right: auto;
   margin-top: 3vh;
   width: 80vw;
-  background-color: #abdefb;
+  background-color: white;
   /*background-color: dodgerblue;*/
   flex-wrap: wrap;
-  padding: 0vh;
+  padding: 1vh;
   /*display: grid;*/
   /*grid-template-columns: auto auto ;*/
 }
@@ -153,6 +164,7 @@
   margin-left: auto;
   margin-right: auto;
   margin-top: 1vh;
+  padding: 0vh;
 }
 
 #containerOneBottomT {
@@ -163,19 +175,21 @@
   margin-left: auto;
   margin-right: auto;
   margin-top: 2vh;
+  padding: 0vh;
+
 }
 
 #containerAT {
   display: flex;
   justify-content: space-between;
-  padding: 2rem;
+  /*padding: 2rem;*/
   margin-left: auto;
   margin-right: auto;
   margin-top: 0vh;
   width: 75vw;
-  /*background-color: #b4ddf5;*/
   background-color: white;
   flex-wrap: wrap;
+  padding: 5vh;
 }
 
 #patientNameT {
@@ -198,7 +212,7 @@
 }
 
 #timeScheduledT {
-  margin-left: 50px;
+  margin-left: 0px;
   display: flex;
 }
 
@@ -235,11 +249,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem;
+  padding-top: 1vh;
   margin-left: auto;
   margin-right: auto;
   margin-top: 1vh;
-  padding-bottom: 5vh;
+  padding-bottom: 1vh;
   width: 80vw;
   /*background-color: dodgerblue;*/
   /*background-color: #b4ddf5;*/
@@ -252,7 +266,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem;
+  padding: 1rem;
   margin: 3rem;
   width: 75vw;
   background-color: white;

@@ -43,6 +43,7 @@ export default function TaskOverview() {
                 <div id="containerButtons">
                     <button id="followUpButton" onClick={handleClickFollowUp}>Add follow-up</button>
                     <button id="taskDoneButton" >Task Done</button>
+                    <button id="archiveButton"> Remove Task </button>
                 </div>
             </div>
         </div>

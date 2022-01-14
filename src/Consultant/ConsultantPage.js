@@ -69,7 +69,7 @@ function Consultant() {
                       <div id="timeCompletedC"> Time Completed: 20:15</div>
                       <div id="TaskCompletedC">
                         {" "}
-                        Task Completed by: Dr.House{" "}
+                        Task Not Completed by: Dr.House{" "}
                       </div>
                     </div>
                   </div>
