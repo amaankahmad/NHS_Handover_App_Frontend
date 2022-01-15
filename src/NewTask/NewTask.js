@@ -1,113 +1,167 @@
 // import React, { Component } from "react";
 // import ReactDOM from "react-dom";
-import "../index.css"
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "../index.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 // import DropdownButton from 'react-bootstrap/DropdownButton';
-import Dropdown from 'react-bootstrap/Dropdown';
 // import { Checkbox } from 'react-bootstrap';
-import './NewTask.css';
-import DateTime from './DateTime'
-import taskIcon from '../Asset/taskIcon.png';
-import {Routes, Route} from "react-router-dom";
-import { useNavigate } from 'react-router';
+import "./NewTask.css";
+import DateTime from "./DateTime";
+import taskIcon from "../Asset/taskIcon.png";
+import { Routes, Route } from "react-router-dom";
+import { useNavigate } from "react-router";
 import React from "react";
 
-
-
-
 function NewTask() {
-    let navigate = useNavigate() ;
-    function returnToLogin(){
-        navigate('/shift')
-    }
-    return(
-        <div className={"NewTask"}>
-            <Routes>
-                <Route path="/NewTask" element = {<>
-                    <div >
-                        <h1 id="headingN" >
-                            NEW TASK:
-                            <img src={taskIcon} id = "taskIconN" height ={75} alt ="taskIcon"/>
-                        </h1>
-
-                        <div id="containerZeroN" className="container">
-
-                            <DateTime id={"DateTimeN"}/>
-                        </div>
+  let navigate = useNavigate();
+  function returnToLogin() {
+    navigate("/shift");
+  }
+  return (
+    <div className={"NewTask"}>
+      <Routes>
+        <Route
+          path="/NewTask" element={ <>
+              <div id="headingNewTask">
+                <div id="titleNewTask">NEW TASK: </div>
+                <div id="taskIconN">
+                  <DateTime />
+                  <img
+                    src={taskIcon}
+                    height={75}
+                    alt="taskIcon"
+                    id="taskIconImg"
+                  />
+                </div>
+              </div>
+              <div id="containerOneN">
+                <div id="containerOneLeftN">
+                  <div id="patientNameN">
+                    <input
+                      type="text"
+                      placeholder={"Patient Name"}
+                      className="resizedTextboxN"
+                    />
+                  </div>
+                  <div id="wardNumberN">
+                    <input
+                      type="text"
+                      placeholder={"Ward #"}
+                      className="resizedTextboxN"
+                    />
+                  </div>
+                  <div id="sexN">
+                    <p id="sexLabelN">Sex :</p>
+                    <div htmlFor="maleN" id="maleLabelN">
+                      M
+                      <input type="checkbox" id="maleN" name="M" />
                     </div>
-                    <div id="containerOneN" className="container">
-                        <div id="patientNameN"><input type="text" placeholder={"Patient Name"} className="resizedTextboxN"/>
-                        </div>
-                        <div id="MRNNumberN"><input type="text" placeholder={"Patient MRN Number"} className="resizedTextboxN"/>
-                        </div>
-                        <div id="wardNumberN"><input type="text" placeholder={"Ward #"} className="resizedTextboxN"/></div>
+                    <label htmlFor="female" id="femaleLabelN">
+                      F
+                      <input type="checkbox" id="femaleN" name="F" />
+                    </label>
+                  </div>
+                </div>
+                <div id="containerOneRightN">
+                  <div id="MRNNumberN">
+                    <input
+                      type="text"
+                      placeholder={"Patient MRN Number"}
+                      className="resizedTextboxN"
+                    />
+                  </div>
+                  <div id="DOBN">
+                    <input type="text" placeholder={"DOB"} />
+                  </div>
+                  <div id="priorityN">
+                    <p id="priorityLabel">Priority :</p>{" "}
+                    <div className="checkLabel">
+                      <p htmlFor="High" id="urgentLabelN">
+                        Urgent
+                      </p>
 
-                        <div id="DOBN"><input type="text" placeholder={"DOB"}/></div>
-                        <div id="sexN">
-                            Sex :
-                            <input type="checkbox" id="maleN" name="M"/>
-                            <label htmlFor="maleN" id="maleLabelN">M</label>
-                            <input type="checkbox" id="femaleN" name="F"/>
-                            <label htmlFor="female" id="femaleLabelN">F </label>
-                        </div>
-
-                        <div id="priorityN">
-                            Priority :
-                            <input type="checkbox" id="urgentN" name="Urgent"/>
-                            <label htmlFor="High" id="urgentLabelN">Urgent </label>
-                            <input type="checkbox" id="nonUrgentN" name="Non-Urgent"/>
-                            <label htmlFor="Low" id="nonUrgentLabelN">Non-Urgent </label>
-                        </div>
+                      <input type="checkbox" id="urgentN" name="Urgent" />
                     </div>
-
-                    <div id="containerTwoN" className="container">
-
-                        <select name="taskType" id="taskTypeN" >
-                            <option value="" disabled selected>Task Type</option>
-                            <option value="completeEcg">Complete ECG</option>
-                            <option value="completeXRay">Complete X-RAY</option>
-                            <option value="completeClinicalReview">Complete Clinical Review</option>
-                        </select>
+                    <div className="checkLabel">
+                      <p htmlFor="Low" id="nonUrgentLabelN">
+                        Non-Urgent
+                      </p>
+                      <input
+                        type="checkbox"
+                        id="nonUrgentN"
+                        name="Non-Urgent"
+                      />
                     </div>
+                  </div>
+                </div>
+              </div>
 
-                    <div id="containerThreeN" className="container">
-                        <div className="row">
+              <div>
+                <select name="taskType" id="taskTypeN">
+                  <option value="" disabled selected>
+                    Task Type
+                  </option>
+                  <option value="completeBloodTest">Complete Blood Test</option>
+                  <option value="checkECGXRay">Check ECG/ X-RAY</option>
+                  <option value="completeClinicalReview">
+                    Complete Clinical Review
+                  </option>
+                  <option value="bespokeTask">Other Task</option>
+                </select>
+              </div>
 
-                            <div id="seniority">
-                                {"\t"} Seniority  :  {"\t"}
-                                <input type="checkbox" id="juniorN" name="Junior"/>
-                                <label htmlFor="Junior" id="juniorLabelN">FY{"\t"} </label>
-                                {"\t"}
-                                <input type="checkbox" id="SHON" name="SHO"/>
-                                <label htmlFor="SHO" id="SHOLabelN">SHO {"\t"}</label>
-                                {"\t"}
-                                <input type="checkbox" id="consultantN" name="Consultant"/>
-                                <label htmlFor="Consultant" id="consultantLabelN">Consultant {"\t"} </label>
-                                {"\t"}
-                            </div>
+              <div id="containerThreeN">
+                <div id="inputRow">
+                  <div id="seniority">
+                    Seniority :
+                    <p htmlFor="Junior" id="juniorLabelN">
+                      FY
+                    </p>
+                    <input type="checkbox" id="juniorN" name="Junior" />
+                    <p htmlFor="SHO" id="SHOLabelN">
+                      SHO
+                    </p>
+                    <input type="checkbox" id="SHON" name="SHO" />
+                    <p htmlFor="Consultant" id="consultantLabelN">
+                      Consultant
+                    </p>
+                    <input type="checkbox" id="consultantN" name="Consultant" />
+                  </div>
+                  <div id="covidStatusInput">
+                    <div id="covidStatus">Covid Status :</div>{" "}
+                    <p htmlFor="redN" id="redLabelN">
+                      Red
+                    </p>
+                    <input type="checkbox" id="redN" name="redN" />
+                    <p htmlFor="blueN" id="blueLabelN">
+                      Blue{" "}
+                    </p>
+                    <input type="checkbox" id="blueN" name="blueN" />
+                  </div>
+                  <div id="scheduleN">
+                    {" "}
+                    <input type="text" placeholder={"Schedule"} />
+                  </div>
+                </div>
+              </div>
 
-                            <div id="covidStatus">Covid Status  :</div>
-                                <input type="checkbox" id="redN" name="redN"/>
-                                <label htmlFor="redN" id="redLabelN">Red {"\t"}</label>
-                                {"\t"}
-                                <input type="checkbox" id="blueN" name="blueN"/>
-                                <label htmlFor="blueN" id="blueLabelN">Blue  </label>
-                            <div id="scheduleN" > <input type="text" placeholder={"Schedule"}/></div>
-                        </div>
-                    </div>
-
-                    <div id="containerFourN" className="container">
-                        <div id="additionalNotesN" > <input type="text" placeholder={"Additional Notes"}/></div>
-                    </div>
-                    <button id="AddTaskN">
-                        Add Task
-                    </button>
-                    <button id="ReturnToLoginN" onClick={returnToLogin}>
-                        Done
-                    </button>
-                </>}/>
-            </Routes>
-        </div>
-    )
+              <div id="containerFourN">
+                <div id="additionalNotesBoxN">
+                  <input id="additionalNotesN" type="text" placeholder={"Additional Notes"} />
+                </div>
+              </div>
+              <div id="actionButtons">
+                <div id="addTaskDiv">
+                  <button id="AddTaskN">Add Task</button>
+                </div>
+                <button id="ReturnToLoginN" onClick={returnToLogin}>
+                  Done
+                </button>
+              </div>
+            </>
+          }
+        />
+      </Routes>
+    </div>
+  );
 }
 export default NewTask;

@@ -1,5 +1,5 @@
 import './HandoverScreen.css';
-import {Routes, Route} from "react-router-dom";
+// import {Routes, Route} from "react-router-dom";
 import { useNavigate } from 'react-router';
 
 // With the buttons, we need to implement the use of the state
@@ -20,7 +20,7 @@ export default function BottomNavbar({role}) {
     }
 
     return (
-        <div className="bottom center" style={{position: "relative" , bottom: "0%"}}>
+        <div id="containerButtons2">
             <>
                 <button style={{marginRight:"10px", color: "white", borderColor: "DodgerBlue" ,backgroundColor: "DodgerBlue", borderRadius: "10px", padding: "10px"}}>My Tasks</button>
                 <button style={{marginLeft:"10px", color: "white", borderColor: "DodgerBlue" ,backgroundColor: "DodgerBlue", borderRadius: "10px", padding: "10px"}}>All Tasks</button>

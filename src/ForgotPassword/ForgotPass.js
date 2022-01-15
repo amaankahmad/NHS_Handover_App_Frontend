@@ -4,8 +4,6 @@ import {Routes, Route} from "react-router-dom";
 import handover_logo from "../Asset/handover_logo.jpeg";
 import imperial_logo from "../Asset/imperiallogo.png";
 import "./ForgotPassword.css" ;
-import signup from "../Asset/signup.png";
-import NHS from "../Asset/NHS.png";
 import {useNavigate} from 'react-router';
 
 function Header(props){
@@ -13,7 +11,7 @@ function Header(props){
 
         <header>
             <div className="header">
-            <img src={handover_logo} id="ourLogo" height={80} alt="logo"/>
+            <img src={handover_logo} id="ourLogo" height={100} alt="logo"/>
             <img src={imperial_logo} id="nhsLogo" height={80} alt="logo"/>
             
             </div>
@@ -46,7 +44,7 @@ function MainForgotPass() {
                 <input type="email"></input>
             </div>
 
-        <div id="actionButtons">
+        <div id="actionButtonsSignUp">
             <button id="button1">
                 Request Reset Link
             </button>

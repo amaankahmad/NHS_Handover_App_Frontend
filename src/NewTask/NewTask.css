@@ -1,299 +1,331 @@
-NewTask{
-    text-align: center;
+NewTask {
+  text-align: center;
 }
 
-#headingN{
-    color:#21ACFA;
-    left:10%;
+#headingNewTask {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  align-items: center;
+  padding: 1rem;
 }
 
-#taskIconN{
-    position: fixed;
-    right: 2%;
-    top: 5%;
+#taskIconImg {
+  margin-left: 1rem;
+}
+
+#titleNewTask {
+  font-size: 40px;
+  font-weight: 500;
+  position: relative;
+  color: #21acfa;
+}
+
+#taskIconN {
+  display: flex;
 }
 
 #resizedTextboxN {
-    width: 15%;
-    height: 3%;
-}
-
-#containerZeroN{
-    position: fixed;
-    top: 5%;
-    left: 13%;
-}
-#taskTypeN{
-    color: white;
-    font-size: large;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    position: center;
-    width: 79%;
-}
-#containerOneN{
-    position: fixed;
-    left:10%;
-    height: 25%;
-    width: 80%;
-    top: 20%;
-    background-color: #ABDEFB;
-    /*display: grid;*/
-    /*grid-template-columns: auto auto ;*/
-}
-
-#patientNameN{
-    position: fixed;
-    left:15%;
-    height: 10%;
-    top: 25%;
-    width: 5%;
-}
-
-#MRNNumberN{
-    position: fixed;
-    right:15%;
-    height: 10%;
-    top: 25%;
-    /*display: grid;*/
-    /*grid-template-columns: auto auto auto ;*/
-}
-
-#wardNumberN{
-    position: fixed;
-    left:15%;
-    height: 10%;
-    top: 30%;
-    /*display: grid;*/
-    /*grid-template-columns: auto auto auto ;*/
-}
-
-#DOBN{
-    position: fixed;
-    right:15%;
-    height: 10%;
-    top: 30%;
-}
-
-#sexN{
-    position: relative;
-    /*left:15%;*/
-    /*height: 10%;*/
-    top: 70%;
-    left: 5%;
-}
-
-#maleN{
-    position: fixed;
-    left:21%;
-    top: 38%;
-    width: 2%;
-}
-
-#maleLabelN{
-    position: fixed;
-    left:19%;
-    top: 37%;
-}
-
-#femaleN{
-    position: fixed;
-    left:28%;
-    top: 38%;
-    width: 2%;
-}
-#femaleLabelN{
-    position: fixed;
-    left:26%;
-    top: 37%;
-}
-
-
-
-#priorityN{
-    position: fixed;
-    left:61%;
-    height: 10%;
-    top: 37%;
-    width: 20%;
-}
-
-#urgentN{
-    position: fixed;
-    left:72%;
-    top: 38%;
-    width: 2%;
-}
-
-#urgentLabelN{
-    position: fixed;
-    left:67%;
-    top: 37%;
-}
-
-#nonUrgentN{
-    position: fixed;
-    left:83%;
-    top: 38%;
-    width: 2%;
-}
-
-#nonUrgentLabelN{
-    position: fixed;
-    left:76%;
-    top: 37%;
+  width: 15%;
+  height: 3%;
 }
 
 #taskTypeN {
-    position: fixed;
-    left:10%;
-    height: 10%;
-    width: 79%;
-    color: black;
-    background-color: LightSkyBlue;
-    border-radius: 1%;
-    top: 47%;
+  color: white;
+  font-size: large;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  position: center;
+  width: 79%;
 }
 
+/*done*/
 
-#containerThreeN{
-    position: fixed;
-    left:10%;
-    height: 10%;
-    width: 80%;
-    top: 59%;
-    background-color: #DDEFFA;
-    display: grid;
+#containerOneN {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3vh;
+  height: fit-content;
+  width: 80vw;
+  background-color: #abdefb;
+  flex-wrap: wrap;
+  /*display: grid;*/
+  /*grid-template-columns: auto auto ;*/
 }
 
-#seniority{
-    position: fixed;
-    left:10%;
-    top: 62%;
+#containerOneLeftN {
 }
 
-#juniorN{
-    position: fixed;
-    left:20%;
-    top: 63%;
-    width: 2%;
+#patientNameN {
+  margin-bottom: 1rem;
 }
 
-#juniorLabelN{
-    position: fixed;
-    left:18.5%;
-    top: 62%;
+#wardNumberN {
+  margin-bottom: 1rem;
 }
 
-#SHON{
-    position: fixed;
-    left:25%;
-    top: 63%;
-    width: 2%;
+#sexN {
+  display: flex;
+  justify-content: space-between;
 }
 
-#SHOLabelN{
-    position: fixed;
-    left:22.5%;
-    top: 62%;
+#sexLabelN {
+  margin-top: -1px;
 }
 
-#consultantN{
-    position: fixed;
-    left:34%;
-    top: 63%;
-    width: 2%;
+#maleN {
+  margin-top: 3px;
+  height: fit-content;
+  margin-left: 10px;
+  width: 20px;
+  height: 20px;
 }
 
-#consultantLabelN{
-    position: fixed;
-    left:28.5%;
-    top: 62%;
+#maleLabelN {
+  display: flex;
 }
 
-#covidStatus{
-    position: fixed;
-    left:39%;
-    top: 62%;
+#femaleN {
+  margin-top: 3px;
+  height: fit-content;
+  margin-left: 10px;
+  width: 20px;
+  height: 20px;
 }
 
-#redN{
-    position: fixed;
-    left:52%;
-    top: 63%;
-    width: 2%;
+#femaleLabelN {
+  display: flex;
+  margin-bottom: 0;
 }
 
-#redLabelN{
-    position: fixed;
-    left:49%;
-    top: 62%;
+/*Right*/
+
+#containerOneRightN {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-left: auto;
 }
 
-#blueN{
-    position: fixed;
-    left:58%;
-    top: 63%;
-    width: 2%;
+#MRNNumberN {
+  margin-bottom: 1rem;
 }
 
-#blueLabelN{
-    position: fixed;
-    left:55%;
-    top: 62%;
+#DOBN {
+  margin-bottom: 1rem;
 }
 
-#scheduleN{
-    position: fixed;
-    right:32%;
-    top: 62%;
-    width: 5%;
+#priorityN {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
 }
 
-
-
-#containerFourN{
-    position: fixed;
-    left:10%;
-    height: 15%;
-    width: 80%;
-    top: 71%;
-    background-color: #DDEFFA;
+.checkLabel {
+  display: flex;
 }
 
-#additionalNotesN{
-    position: relative;
-    top: 15%;
-    left: 2%;
-    height: 10%;
-    width: 80%;
+#urgentN {
+  margin-top: 3px;
+  height: fit-content;
+  margin-left: 10px;
+  width: 20px;
+  height: 20px;
+}
+
+#urgentLabelN {
+}
+
+#nonUrgentN {
+  margin-top: 3px;
+  height: fit-content;
+  margin-left: 10px;
+  width: 20px;
+  height: 20px;
+}
+
+#nonUrgentLabelN {
+}
+
+#taskTypeN {
+  display: flex;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  height: 6rem;
+  width: 80vw;
+  color: black;
+  background-color: LightSkyBlue;
+  border-radius: 1%;
+}
+
+#containerThreeN {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  height: fit-content;
+  width: 80vw;
+  background-color: #ddeffa;
+}
+
+#inputRow {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+#seniority {
+  display: flex;
+}
+
+#juniorLabelN {
+  margin-left: 1rem;
+}
+
+#juniorN {
+  margin-left: 0.5rem;
+  margin-top: 3px;
+  height: fit-content;
+  margin-left: 10px;
+  width: 20px;
+  height: 20px;
+}
+
+#SHOLabelN {
+  margin-left: 1rem;
+}
+
+#SHON {
+  margin-left: 0.5rem;
+  margin-top: 3px;
+  height: fit-content;
+  margin-left: 10px;
+  width: 20px;
+  height: 20px;
+}
+
+#consultantLabelN {
+  margin-left: 1rem;
+}
+
+#consultantN {
+  margin-left: 0.5rem;
+  margin-top: 3px;
+  height: fit-content;
+  margin-left: 10px;
+  width: 20px;
+  height: 20px;
+}
+
+#covidStatusInput {
+  display: flex;
+}
+
+#covidStatus {
+}
+
+#redN {
+  margin-left: 0.5rem;
+  margin-top: 3px;
+  height: fit-content;
+  margin-left: 10px;
+  width: 20px;
+  height: 20px;
+}
+
+#redLabelN {
+  margin-left: 1rem;
+}
+
+#blueN {
+  margin-left: 0.5rem;
+  margin-top: 3px;
+  height: fit-content;
+  margin-left: 10px;
+  width: 20px;
+  height: 20px;
+}
+
+#blueLabelN {
+  margin-left: 1rem;
+}
+
+#scheduleN {
+}
+
+#containerFourN {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+  height: fit-content;
+  width: 80vw;
+  background-color: #ddeffa;
+}
+
+#additionalNotesBoxN{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+#additionalNotesN {
+  margin: 20px;
+  height: 100px;
+  border: none;
+  background-color: aliceblue;
+  padding: 2px;
+  border-radius: 5px;
+  padding: 2px;
+  width:1050px;
+}
+
+#actionButtons {
+  width: 80vw;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#addTaskDiv {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  padding-left: 150px;
 }
 
 #AddTaskN {
-    position: fixed;
-    left:35%;
-    height: 10%;
-    width: 30%;
-    top: 88%;
-    color: white;
-    font-size: large;
-    border-color: DodgerBlue;
-    background-color: DodgerBlue;
-    border-radius: 10px;
-    padding: 10px;
+  color: white;
+  font-size: large;
+  border-color: DodgerBlue;
+  background-color: DodgerBlue;
+  border-radius: 10px;
+  padding: 10px;
+  width: 150px;
+  height: 50px;
 }
 
 #ReturnToLoginN {
-    position: fixed;
-    left:79.25%;
-    height: 10%;
-    width: 10%;
-    top: 88%;
-    color: white;
-    font-size: large;
-    border-color: DodgerBlue;
-    background-color: DodgerBlue;
-    border-radius: 10px;
-    padding: 10px;
+  color: white;
+  font-size: large;
+  border-color: DodgerBlue;
+  background-color: DodgerBlue;
+  border-radius: 10px;
+  padding: 10px;
+  width: 150px;
+  height: 50px;
 }

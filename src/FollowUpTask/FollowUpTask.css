@@ -1,66 +1,36 @@
-/*FollowUpTask{*/
-/*    text-align: center;*/
-/*}*/
-
-#heading{
-    color:#21ACFA;
-    margin: 1% 5%;
-    left: 5%;
-    top: 5%;
+FollowUpTask{
+    text-align: center;
 }
 
-#taskIcon{
-    position: fixed;
-    right: 1%;
-    top: 5%;
-    height: 9% ;
+#headingFollowUp{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    align-items: center;
+    padding: 1rem;
 }
 
-#containerZero{
-    position: fixed;
-    top: 5%;
-    left: 13%;
+#taskIconImg{
+    margin-left: 1rem;
 }
 
-#containerOne{
-    position: fixed;
-    background:#ABDEFB;
-    top: 15%;
-    width: 80%;
-    height: 10%;
-    left: 10%;
+#titleFollowUp {
+    font-size: 40px;
+    font-weight: 500;
+    position: relative;
+    color: #21acfa;
 }
 
-#Priority{
-    position:fixed;
-    left: 50%;
+#taskIcon {
+    display: flex;
 }
 
-#wardNumber{
-    position: fixed;
-    right: 10%;
+#resizedTextbox {
+    width: 15%;
+    height: 3%;
 }
 
 #taskType {
-    position: fixed;
-    color: black;
-    top: 27%;
-    width: 79%;
-    height: 10%;
-    left: 10%;
-    background-color: #21ACFA;
-    border-radius: .5%;
-}
-
-#containerThree{
-    position: fixed;
-    background: #DDEFFA;
-    top: 39%;
-    width: 80%;
-    height: 10%;
-    left: 10%;
-}
-#taskType{
     color: white;
     font-size: large;
     text-align: center;
@@ -70,37 +40,241 @@
     width: 79%;
 }
 
-#containerFour{
-    position: fixed;
-    color: black;
-    background: #DDEFFA;
-    top: 51%;
-    width: 80%;
-    height:25%;
-    left: 10%;
+#containerOne{
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3vh;
+    height: fit-content;
+    width: 80vw;
+    background-color: #abdefb;
+    flex-wrap: wrap;
+}
+
+#containerOneLeft {
+
+}
+
+#wardNumber {
+    margin-bottom: 1rem;
+}
+
+#containerOneRight {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-left: auto;
+}
+
+#priority{
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    margin-bottom: 1rem;
 }
 
 
+.checkLabel {
+    display: flex;
+}
+
+#urgent {
+    margin-top: 3px;
+    height: fit-content;
+    margin-left: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+#urgentLabel {
+}
+
+#nonUrgent {
+    margin-top: 3px;
+    height: fit-content;
+    margin-left: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+#nonUrgentLabelN {
+}
+
+#taskType {
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+    height: 6rem;
+    width: 80vw;
+    color: black;
+    background-color: LightSkyBlue;
+    border-radius: 1%;
+}
+
+
+#containerThree{
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+    height: fit-content;
+    width: 80vw;
+    background-color: #ddeffa;
+}
+#inputRow {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#seniority {
+    display: flex;
+}
+
+#juniorLabel {
+    margin-left: 1rem;
+}
+
+#junior {
+    margin-left: 0.5rem;
+    margin-top: 3px;
+    height: fit-content;
+    margin-left: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+#SHOLabel {
+    margin-left: 1rem;
+}
+
+#SHO {
+    margin-left: 0.5rem;
+    margin-top: 3px;
+    height: fit-content;
+    margin-left: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+#consultantLabel {
+    margin-left: 1rem;
+}
+
+#consultant {
+    margin-left: 0.5rem;
+    margin-top: 3px;
+    height: fit-content;
+    margin-left: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+#covidStatusInput {
+    display: flex;
+}
+
+#covidStatus {
+}
+
+#red {
+    margin-left: 0.5rem;
+    margin-top: 3px;
+    height: fit-content;
+    margin-left: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+#redLabel {
+    margin-left: 1rem;
+}
+
+#blue {
+    margin-left: 0.5rem;
+    margin-top: 3px;
+    height: fit-content;
+    margin-left: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+#blueLabel {
+    margin-left: 1rem;
+}
+
+#schedule {
+}
+
+#containerFour{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+    height: fit-content;
+    width: 80vw;
+    background-color: #ddeffa;
+}
+#additionalNotesBox{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#additionalNotes {
+    margin: 20px;
+    height: 100px;
+    border: none;
+    background-color: aliceblue;
+    padding: 2px;
+    border-radius: 5px;
+    padding: 2px;
+    width:1070px;
+}
+
+#actionButtonsFollowUp {
+    width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#addTaskButton {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    padding-left: 150px;
+}
 
 #AddTask {
-    position: fixed;
-    top: 80%;
-    left:45%;
-    height: 40px;
-    width: 10%;
     color: white;
-    border-color: #21ACFA;
+    font-size: large;
+    border-color: DodgerBlue;
     background-color: DodgerBlue;
-    border-radius: 2px;
+    border-radius: 10px;
+    padding: 10px;
+    width: 150px;
+    height: 50px;
 }
-#ReturnToList {
-    position: fixed;
-    top: 80%;
-    left: 77.25%;
-    height: 40px;
-    width: 12%;
+#ReturnToTaskList {
     color: white;
-    border-color: #21ACFA;
+    font-size: large;
+    border-color: DodgerBlue;
     background-color: DodgerBlue;
-    border-radius: 2px;
+    border-radius: 10px;
+    padding: 10px;
+    width: 250px;
+    height: 50px;
 }

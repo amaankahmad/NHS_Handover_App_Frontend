@@ -68,7 +68,7 @@ function Main(){
 
 
 
-                <div id="actionButtons">
+                <div id="actionButtonsLogin">
                     <button id="button1" onClick={handleClick}>
                         Login
                     </button>

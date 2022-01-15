@@ -39,12 +39,12 @@
 
 .bottom {
   position: absolute;
-  bottom: 50px;
+  bottom:1000px;
 }
 
 .center {
   position: absolute;
-  left: 50%;
+  left: 85%;
   transform: translateX(-50%);
   text-align: center;
 }
@@ -77,12 +77,229 @@
   position: absolute;
   top: 30%;
   text-align: center;
-  background-color: LightSkyBlue;
+  background-color: white;
   margin: 50px;
 }
 
 #prioritySeparation {
   right: 10%;
 }
+
+#followUpButton{
+  color: white;
+  width: 100%;
+  border-color: DodgerBlue;
+  background-color: DodgerBlue;
+  border-radius: 10px;
+  padding: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+#archiveButton{
+  color: white;
+  width: 100%;
+  border-color: #f36357;
+  background-color: #f36357;
+  border-radius: 10px;
+  padding: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+#taskDoneButton{
+  color: white;
+  width: 100%;
+  border-color: mediumseagreen;
+  background-color: mediumseagreen;
+  border-radius: 10px;
+  padding: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+#welcomeBanner{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  align-items: center;
+  padding: 1rem;
+}
+
+#titleBanner{
+  font-size: 40px;
+  font-weight: 500;
+  position: relative;
+  color: #21acfa;
+}
+#taskIconW {
+  display: flex;
+}
+
+#taskIconImgW {
+  margin-left: 1rem;
+}
+
+#containerOneT {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3vh;
+  width: 80vw;
+  background-color: white;
+  /*background-color: dodgerblue;*/
+  flex-wrap: wrap;
+  padding: 1vh;
+  /*display: grid;*/
+  /*grid-template-columns: auto auto ;*/
+}
+
+#containerOneTopT {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1vh;
+  padding: 0vh;
+}
+
+#containerOneBottomT {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2vh;
+  padding: 0vh;
+
+}
+
+#containerAT {
+  display: flex;
+  justify-content: space-between;
+  /*padding: 2rem;*/
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0vh;
+  width: 75vw;
+  background-color: white;
+  flex-wrap: wrap;
+  padding: 5vh;
+}
+
+#patientNameT {
+  display: flex;
+}
+
+#MRNnumberT {
+  display: flex;
+  margin-left: 5%;
+}
+
+#SexT {
+  display: flex;
+}
+
+#covidStatusT {
+  margin-right: 5px;
+  margin-left: 5px;
+  display: flex;
+}
+
+#timeScheduledT {
+  margin-left: 0px;
+  display: flex;
+}
+
+#additionalNotesT {
+  /*margin-left: 203px;*/
+  display: flex;
+}
+
+#containerOneMiddleT {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2vh;
+}
+
+#containerButtons {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2vh;
+}
+#containerButtons2 {
+  margin-left: 50%;
+  margin-bottom: 60%;
+}
+
+#containerT {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1vh;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1vh;
+  padding-bottom: 1vh;
+  width: 80vw;
+  /*background-color: dodgerblue;*/
+  /*background-color: #b4ddf5;*/
+  background-color: white;
+  flex-wrap: wrap;
+}
+
+
+#envelope1T {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  margin: 3rem;
+  width: 75vw;
+  background-color: white;
+  /*background-color: dodgerblue;*/
+  flex-wrap: wrap;
+}
+
+#StatusT {
+  color: red;
+  font-weight: bold;
+  font-size: larger;
+}
+
+#taskTypeT {
+  margin-right: 5px;
+  margin-left: 5px;
+  font-weight: bold;
+  font-size: larger;
+}
+
+#LocationT {
+  margin-right: 5px;
+  margin-left: 5px;
+  font-weight: bold;
+  font-size: larger;
+}
+#priorityT {
+  margin-right: 5px;
+  margin-left: 5px;
+  font-weight: bold;
+  font-size: larger;
+}
+
+
 
 
