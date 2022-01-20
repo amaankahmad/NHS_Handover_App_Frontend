@@ -9,7 +9,7 @@ import {BrowserRouter as Router} from "react-router-dom";
 import Signup from './SignUp/Signup';
 import NewTask from "./NewTask/NewTask";
 import Handover from "./Handover/Handover";
-import ForgotPassword from "./ForgotPassword/ForgotPass";
+import ForgotPassword from "./ForgotPassword/ForgotPassword";
 import FollowUpTask from "./FollowUpTask/FollowUpTask";
 import Consultant from "./Consultant/ConsultantPage";
 

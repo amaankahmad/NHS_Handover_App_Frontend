@@ -6,6 +6,7 @@ import sun from "../Asset/sun.png";
 import moon from "../Asset/moon.png";
 import {Routes, Route} from "react-router-dom";
 import { useNavigate } from 'react-router';
+import LoginDoctor from "./LoginDoctor";
 
 function Header(props){
     return(
@@ -30,13 +31,13 @@ function Main(){
         console.warn(val.target.value)
     }
     let navigate = useNavigate();
-    function handleClick() {
+    function navigateToShift() {
         navigate('/shift')
     }
-    function handleClick2() {
+    function navigateToForgotPassword() {
         navigate('/ForgotPassword')
     }
-    function handleClick3() {
+    function navigateToSignUp() {
         navigate('/Signup')
     }
 
@@ -47,42 +48,7 @@ function Main(){
                 <div id="headerSignIn">
                     <h2> Login Page </h2>
                 </div>
-
-
-                <div id="mainBoxL">
-
-                    <div className="row">
-                        <label>
-                            <b>NHS Email:</b>
-                        </label>
-                        <input className = "form-control" type="email" onChange={getData}/>
-                    </div>
-
-                    <div className="row">
-                        <label>
-                            <b>Password:</b>
-                        </label>
-                        <input className = "form-control" type="password"></input>
-                    </div>
-
-
-
-                <div id="actionButtonsLogin">
-                    <button id="button1" onClick={handleClick3}>
-                        Sign up
-                    </button>
-
-                    <button id="button2"  onClick={handleClick2}>
-                        Forgot Password
-                    </button>
-
-                    <button id="button3" onClick={handleClick}  >
-                        Login
-                    </button>
-
-                </div>
-            
-                </div>
+                    <LoginDoctor login = {navigateToShift} signUp = {navigateToSignUp} forgotPassword = {navigateToForgotPassword}/>
             </div>
         </div>
     </section>

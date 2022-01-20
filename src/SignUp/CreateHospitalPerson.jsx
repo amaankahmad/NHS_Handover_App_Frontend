@@ -132,7 +132,7 @@ class CreateHospitalPerson extends Component {
                         <select name="role" type="role" id="role" required onChange={this.changeRoleHandler}>
                             <option value="empty"></option>
                             <option value="JuniorDoctor">FY</option>
-                            <option value="SHO">SHO</option>
+                            <option value="JuniorDoctor">SHO</option>
                             <option value="Consultant">Spr/Cons</option>
                         </select>
                         <div>
