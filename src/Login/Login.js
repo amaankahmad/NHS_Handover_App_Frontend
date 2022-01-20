@@ -1,12 +1,11 @@
 import React, {useState} from 'react';
-import './login.css';
+import './Login.css';
 import handover_logo from "../Asset/handover_logo.jpeg";
 import imperial_logo from "../Asset/imperiallogo.png";
 import sun from "../Asset/sun.png";
 import moon from "../Asset/moon.png";
 import {Routes, Route} from "react-router-dom";
 import { useNavigate } from 'react-router';
-import ListPersonsComponent from "../ShowPersons/ListPersonsComponent";
 
 function Header(props){
     return(
@@ -56,29 +55,29 @@ function Main(){
                         <label>
                             <b>NHS Email:</b>
                         </label>
-                        <input type="email" onChange={getData}/>
+                        <input className = "form-control" type="email" onChange={getData}/>
                     </div>
 
                     <div className="row">
                         <label>
                             <b>Password:</b>
                         </label>
-                        <input type="password"></input>
+                        <input className = "form-control" type="password"></input>
                     </div>
 
 
 
                 <div id="actionButtonsLogin">
-                    <button id="button1" onClick={handleClick}>
-                        Login
+                    <button id="button1" onClick={handleClick3}>
+                        Sign up
                     </button>
 
                     <button id="button2"  onClick={handleClick2}>
                         Forgot Password
                     </button>
 
-                    <button id="button3" onClick={handleClick3}  >
-                        Sign up
+                    <button id="button3" onClick={handleClick}  >
+                        Login
                     </button>
 
                 </div>
@@ -164,12 +163,12 @@ function Login(){
             </>}/>
 
                 <Route path="/shift" element={ <>
-                    {/*<Header2 />*/}
-                    {/*<Main2/>*/}
-                    <div className="container">
-                        <Header2 />
-                        <ListPersonsComponent/>
-                    </div>
+                    <Header2 />
+                    <Main2/>
+                    {/*<div className="container">*/}
+                    {/*    <Header2 />*/}
+                    {/*    <ListPersonsComponent/>*/}
+                    {/*</div>*/}
                 </>}/>
             </Routes>
         </div>

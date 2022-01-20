@@ -45,7 +45,7 @@ function FollowUpTask() {
                             <input
                                 type="text"
                                 placeholder={"Ward #"}
-                                className="resizedTextBox"
+                                className = "form-control"
                             />
                         </div>
                     </div>
@@ -117,14 +117,14 @@ function FollowUpTask() {
                             </div>
                             <div id="schedule">
                                 {" "}
-                                <input type="text" placeholder={"Schedule"} />
+                                <input className = "form-control" type="text" placeholder={"Schedule"} />
                             </div>
                         </div>
                     </div>
 
                     <div id="containerFour">
                         <div id="additionalNotesBox">
-                            <input id="additionalNotes" type="text" placeholder={"Additional Notes"} />
+                            <input className = "form-control" id="additionalNotes" type="text" placeholder={"Additional Notes"} />
                         </div>
                     </div>
 

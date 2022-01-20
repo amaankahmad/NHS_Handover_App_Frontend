@@ -39,14 +39,14 @@ function NewTask() {
                     <input
                       type="text"
                       placeholder={"Patient Name"}
-                      className="resizedTextboxN"
+                      className = "form-control"
                     />
                   </div>
                   <div id="wardNumberN">
                     <input
                       type="text"
                       placeholder={"Ward #"}
-                      className="resizedTextboxN"
+                      className = "form-control"
                     />
                   </div>
                   <div id="sexN">
@@ -66,11 +66,11 @@ function NewTask() {
                     <input
                       type="text"
                       placeholder={"Patient MRN Number"}
-                      className="resizedTextboxN"
+                      className = "form-control"
                     />
                   </div>
                   <div id="DOBN">
-                    <input type="text" placeholder={"DOB"} />
+                    <input className = "form-control" type="text" placeholder={"DOB"} />
                   </div>
                   <div id="priorityN">
                     <p id="priorityLabel">Priority :</p>{" "}
@@ -139,14 +139,14 @@ function NewTask() {
                   </div>
                   <div id="scheduleN">
                     {" "}
-                    <input type="text" placeholder={"Schedule"} />
+                    <input className = "form-control" type="text" placeholder={"Schedule"} />
                   </div>
                 </div>
               </div>
 
               <div id="containerFourN">
                 <div id="additionalNotesBoxN">
-                  <input id="additionalNotesN" type="text" placeholder={"Additional Notes"} />
+                  <input className = "form-control" id="additionalNotesN" type="text" placeholder={"Additional Notes"} />
                 </div>
               </div>
               <div id="actionButtons">
