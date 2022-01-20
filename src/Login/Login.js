@@ -79,20 +79,20 @@ function Header2(){
 
 function Main2(){
     let navigate = useNavigate() ;
-   function handleClick4() {
+   function navigateToNewTask() {
        navigate('/NewTask')
    }
-    function handleClick5() {
+    function navigateToHandover() {
         navigate('/Handover')
     }
-    function handleClick6() {
+    function returnToLogIn() {
         navigate('/')
     }
     return(
         <section>
-<p></p>
+            <p></p>
             <div>
-            <button id="buttonSun" onClick={handleClick4} style={{backgroundColor:'White'}}>
+            <button id="buttonSun" onClick={navigateToNewTask} style={{backgroundColor:'White'}}>
                 <figure>
                 <img src={sun} height={180} alt="sun"/>
                     <figcaption>
@@ -100,7 +100,7 @@ function Main2(){
                     </figcaption>
                 </figure>
             </button>
-            <button id="buttonMoon" onClick={handleClick5} style={{backgroundColor:'White'}}>
+            <button id="buttonMoon" onClick={navigateToHandover} style={{backgroundColor:'White'}}>
                 <figure>
                 <img src={moon} height={180} alt="moon"/>
                     <figcaption>
@@ -108,7 +108,7 @@ function Main2(){
                     </figcaption>
                 </figure>
             </button>
-                <button id="buttonSignOut" onClick={handleClick6}  >
+                <button id="buttonSignOut" onClick={returnToLogIn}  >
                     Sign out
                 </button>
             </div>

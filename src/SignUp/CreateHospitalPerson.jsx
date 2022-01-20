@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {MemoryRouter, useHistory} from "react-router"
-// import HospitalPersonnelService from "./HospitalPersonnelService";
+import HospitalPersonnelService from "./HospitalPersonnelService";
 import {useNavigate} from "react-router";
 
 class CreateHospitalPerson extends Component {
@@ -29,14 +29,15 @@ class CreateHospitalPerson extends Component {
 
     saveHospitalPerson = (e) => {
         let hospitalPersonnel = {name: this.state.name, email: this.state.email,
-                                    numPager: this.state.numPager, password: this.state.password,
-                                        role: this.state.role};
+                                    numPager: this.state.numPager, password: this.state.password,};
         console.log('Hospital Personnel =>' + JSON.stringify(hospitalPersonnel))
 
-        // this.setState({msg: JSON.stringify(hospitalPersonnel)})
-
-        // HospitalPersonnelService.createHospitalPerson(hospitalPersonnel).then(res => {
-        // })
+        if (this.state.role === "Consultant") {
+            HospitalPersonnelService.createConsultant(hospitalPersonnel).then(res => {});
+        }
+        else {
+            HospitalPersonnelService.createJuniorDoctor(hospitalPersonnel).then(res => {});
+        }
     }
 
     changeNameHandler=(event) => {
@@ -69,7 +70,7 @@ class CreateHospitalPerson extends Component {
 
     checkEntries(e) {
         if (this.state.name==="" || this.state.numPager==="" || this.state.email==="" || this.state.password === ""
-                || this.state.confirmPassword==="") {
+                || this.state.confirmPassword==="" || this.state.role === "empty") {
             this.setState({msg: "Please fill out all entries."});
             return false;
         }
@@ -131,8 +132,8 @@ class CreateHospitalPerson extends Component {
                         </label>
                         <select name="role" type="role" id="role" required onChange={this.changeRoleHandler}>
                             <option value="empty"></option>
-                            <option value="JuniorDoctor">FY</option>
-                            <option value="JuniorDoctor">SHO</option>
+                            <option value="Junior Doctor">FY</option>
+                            <option value="Junior Doctor">SHO</option>
                             <option value="Consultant">Spr/Cons</option>
                         </select>
                         <div>

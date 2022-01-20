@@ -301,6 +301,9 @@ NewTask {
   justify-content: flex-end;
 }
 
+#entryCheck {
+  text-align: center;
+}
 #addTaskDiv {
   display: flex;
   flex-grow: 1;

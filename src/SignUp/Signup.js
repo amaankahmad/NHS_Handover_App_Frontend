@@ -6,7 +6,6 @@ import doc2 from "../Asset/doc2.jpg";
 import "./Signup.css";
 import { Routes, Route } from "react-router-dom";
 import { useNavigate } from "react-router";
-import CreateHospitalPersonnel from "./CreateHospitalPersonnel";
 import CreateHospitalPerson from "./CreateHospitalPerson";
 
 

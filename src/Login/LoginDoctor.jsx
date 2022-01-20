@@ -44,11 +44,7 @@ class LoginDoctor extends Component {
 
     handleSubmit(e) {
         e.preventDefault(); // Prevent clicking submit with empty args
-        console.log("Handling submit...")
-        console.log(this.state.email);
-        console.log(this.state.password);
         if(this.checkEntries()) {
-            console.log("All entries checked")
             if(this.validation()) {
                 this.props.login();
             }

@@ -9,7 +9,15 @@ class HospitalPersonnelService {
     }
 
     createHospitalPerson(hospitalPersonnel) {
-        return axios.post(HOSPITAL_PERSON_API_BASE_URL, hospitalPersonnel)
+        return axios.post(HOSPITAL_PERSON_API_BASE_URL+"/createHospitalPerson", hospitalPersonnel)
+    }
+
+    createJuniorDoctor(hospitalPersonnel) {
+        return axios.post(HOSPITAL_PERSON_API_BASE_URL+"/createJuniorDoctor", hospitalPersonnel)
+    }
+
+    createConsultant(hospitalPersonnel) {
+        return axios.post(HOSPITAL_PERSON_API_BASE_URL+"/createConsultant", hospitalPersonnel)
     }
 }
 
