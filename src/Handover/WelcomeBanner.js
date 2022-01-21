@@ -9,15 +9,15 @@ export default function WelcomeBanner({name}) {
          <section>
     <div id="welcomeBanner">
         <div id="titleBanner">Hello {name}</div>
-                    <div id="taskIconW">
-                        <DateTime />
-                        <img
-                            src={image}
-                            height={75}
-                            alt="taskIcon"
-                            id="taskIconImgW"
-                        />
-                    </div>
+        <div id="taskIconW">
+            <DateTime />
+            <img
+                src={image}
+                height={75}
+                alt="taskIcon"
+                id="taskIconImgW"
+            />
+        </div>
     </div>
         </section>
     );

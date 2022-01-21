@@ -11,20 +11,12 @@ export default function BottomNavbar({role}) {
         navigate('/shift')
     }
 
-    // var secondButton = false;
-    // var firstButtonText = 'My Tasks';
-
-
-    if (role === 'SHO') {
-        // secondButton = true;
-    }
-
     return (
         <div id="containerButtons2">
             <>
-                <button style={{marginRight:"10px", color: "white", borderColor: "DodgerBlue" ,backgroundColor: "DodgerBlue", borderRadius: "10px", padding: "10px"}}>My Tasks</button>
-                <button style={{marginLeft:"10px", color: "white", borderColor: "DodgerBlue" ,backgroundColor: "DodgerBlue", borderRadius: "10px", padding: "10px"}}>All Tasks</button>
-                <button onClick={returnToLog} style={{marginLeft:"10px", color: "white", borderColor: "DodgerBlue" ,backgroundColor: "DodgerBlue", borderRadius: "10px" , padding: "10px"}}> Back to Login  </button>
+                {/*<button style={{marginRight:"10px", color: "white", borderColor: "DodgerBlue" ,backgroundColor: "DodgerBlue", borderRadius: "10px", padding: "10px"}}>My Tasks</button>*/}
+                {/*<button style={{marginLeft:"10px", color: "white", borderColor: "DodgerBlue" ,backgroundColor: "DodgerBlue", borderRadius: "10px", padding: "10px"}}>All Tasks</button>*/}
+                <button onClick={returnToLog} style={{color: "white", borderColor: "DodgerBlue" ,backgroundColor: "DodgerBlue", borderRadius: "10px" , padding: "10px"}}> Back to Login  </button>
             </>
         </div>
     );

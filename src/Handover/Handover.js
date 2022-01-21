@@ -4,8 +4,12 @@ import WelcomeBanner from "./WelcomeBanner";
 import PageTitle from "./PageTitle";
 import TasksBox from "./TasksBox";
 import {Routes, Route} from "react-router-dom";
+import HandoverService from "./HandoverService";
 
 function Handover() {
+    // var tasks = HandoverService.getUncompletedTasks();
+    // console.log(tasks)
+
     return (
          <div className={"Handover"}>
              <Routes>

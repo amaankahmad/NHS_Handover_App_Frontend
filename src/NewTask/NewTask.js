@@ -10,7 +10,7 @@ import taskIcon from "../Asset/taskIcon.png";
 import { Routes, Route } from "react-router-dom";
 import { useNavigate } from "react-router";
 import React from "react";
-import CreateNewTask from "./createNewTask";
+import CreateNewTask from "./CreateNewTask";
 
 function NewTask() {
   let navigate = useNavigate();
