@@ -24,8 +24,11 @@ function MainSignUp() {
   function returnLogIn() {
     navigate("/");
   }
-  function navigateToShift() {
-    navigate("/shift");
+  function navigateToShift(docName) {
+    navigate("/shift", {state: {name: docName}});
+  }
+  function navigateToConsultant(docName) {
+    navigate("/Consultant", {state: {name: docName}});
   }
 
   return (
@@ -36,7 +39,7 @@ function MainSignUp() {
             <h2> Create a new profile: </h2>
           </div>
           <div id="mainBox">
-            <CreateHospitalPerson home={returnLogIn} register={navigateToShift}/>
+            <CreateHospitalPerson home={returnLogIn} navJuniorDr={navigateToShift} navConsultant={navigateToConsultant}/>
           </div>
         </div>
 

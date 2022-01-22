@@ -13,7 +13,7 @@ export default function WelcomeBanner({name}) {
     return (
          <section>
             <div id="welcomeBanner">
-                <div id="titleBanner">Hello {name}</div>
+                <div id="titleBanner">Hello Dr. {name}</div>
                 <div id="taskIconW">
                     <DateTime />
                     <img
@@ -24,9 +24,9 @@ export default function WelcomeBanner({name}) {
                     />
                 </div>
             </div>
-             <button onClick={returnToShift} style={{float: "right", marginTop: "20px", marginRight: "20px",
-                 color: "white", borderColor: "DodgerBlue" ,backgroundColor: "DodgerBlue", borderRadius: "10px" ,
-                 padding: "10px"}}> Back to Login  </button>
+             {/*<button onClick={returnToShift} style={{float: "right", marginTop: "20px", marginRight: "20px",*/}
+             {/*    color: "white", borderColor: "DodgerBlue" ,backgroundColor: "DodgerBlue", borderRadius: "10px" ,*/}
+             {/*    padding: "10px"}}> Back to Login  </button>*/}
          </section>
     );
 }

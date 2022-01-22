@@ -31,14 +31,17 @@ function Main(){
         console.warn(val.target.value)
     }
     let navigate = useNavigate();
-    function navigateToShift() {
-        navigate('/shift')
+    function navigateToShift(docName) {
+        navigate('/shift', {state: {name: docName}})
     }
     function navigateToForgotPassword() {
         navigate('/ForgotPassword')
     }
     function navigateToSignUp() {
         navigate('/Signup')
+    }
+    function navigateToConsultant(docName) {
+        navigate('/Consultant', {state: {name: docName}})
     }
 
     return(
@@ -48,7 +51,8 @@ function Main(){
                 <div id="headerSignIn">
                     <h2> Login Page </h2>
                 </div>
-                    <LoginDoctor login = {navigateToShift} signUp = {navigateToSignUp} forgotPassword = {navigateToForgotPassword}/>
+                    <LoginDoctor login = {navigateToShift} signUp = {navigateToSignUp}
+                                 forgotPassword = {navigateToForgotPassword} consultantPage={navigateToConsultant}/>
             </div>
         </div>
     </section>
@@ -64,59 +68,6 @@ function Footer(){
         </footer>
     )
 }
-function Header2(){
-    return(
-
-        <header>
-            <div className="header">
-            <img src={handover_logo} id="ourLogo" height={100} alt="logo"/>
-            <img src={imperial_logo} id="nhsLogo" height={80} alt="logo"/>
-            </div>
-        </header>
-
-    )
-}
-
-function Main2(){
-    let navigate = useNavigate() ;
-   function navigateToNewTask() {
-       navigate('/NewTask')
-   }
-    function navigateToHandover() {
-        navigate('/Handover')
-    }
-    function returnToLogIn() {
-        navigate('/')
-    }
-    return(
-        <section>
-            <p></p>
-            <div>
-            <button id="buttonSun" onClick={navigateToNewTask} style={{backgroundColor:'White'}}>
-                <figure>
-                <img src={sun} height={180} alt="sun"/>
-                    <figcaption>
-                        Ending Day Shift
-                    </figcaption>
-                </figure>
-            </button>
-            <button id="buttonMoon" onClick={navigateToHandover} style={{backgroundColor:'White'}}>
-                <figure>
-                <img src={moon} height={180} alt="moon"/>
-                    <figcaption>
-                        Start Evening Shift
-                    </figcaption>
-                </figure>
-            </button>
-                <button id="buttonSignOut" onClick={returnToLogIn}  >
-                    Sign out
-                </button>
-            </div>
-
-        </section>
-
-    )
-}
 
 function Login(){
     return(
@@ -127,15 +78,6 @@ function Login(){
             <Main/>
             <Footer/>
             </>}/>
-
-                <Route path="/shift" element={ <>
-                    <Header2 />
-                    <Main2/>
-                    {/*<div className="container">*/}
-                    {/*    <Header2 />*/}
-                    {/*    <ListPersonsComponent/>*/}
-                    {/*</div>*/}
-                </>}/>
             </Routes>
         </div>
     );

@@ -8,16 +8,23 @@ import "./NewTask.css";
 import DateTime from "./DateTime";
 import taskIcon from "../Asset/taskIcon.png";
 import { Routes, Route } from "react-router-dom";
-import { useNavigate } from "react-router";
+import {useLocation, useNavigate} from "react-router";
 import React from "react";
 import CreateNewTask from "./CreateNewTask";
 
 function NewTask() {
-  let navigate = useNavigate();
-  function returnToLogin() {
-    navigate("/shift");
-  }
-  return (
+    let location= useLocation();
+
+    let navigate = useNavigate();
+    function returnToLogin() {
+        navigate("/shift", {state: {name: location.state.name}});
+    }
+
+    if (!location.state) {
+        return <div>...</div>
+    }
+
+    return (
     <div className={"NewTask"}>
       <Routes>
         <Route
@@ -34,12 +41,12 @@ function NewTask() {
                   />
                 </div>
               </div>
-              <CreateNewTask home={returnToLogin}/>
+              <CreateNewTask home={returnToLogin} doc={location.state.name}/>
             </>
           }
         />
       </Routes>
     </div>
-  );
+    );
 }
 export default NewTask;

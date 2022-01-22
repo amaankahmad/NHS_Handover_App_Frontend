@@ -3,12 +3,14 @@ import HandoverService from "./HandoverService";
 import 'bootstrap/dist/css/bootstrap.css';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
+import HospitalPersonnelService from "../SignUp/HospitalPersonnelService";
 
 class TasksBox extends Component {
     constructor(props) {
         super(props);
 
         this.state = {
+            hospitalPersons: [],
             tasks: [],
             loading: true,
             doctorOfTask: {},
@@ -27,15 +29,22 @@ class TasksBox extends Component {
     }
 
     checkEntries(id) {
-        console.log(this.state.doctorOfTask[id])
         if (this.state.doctorOfTask[id]==="" || this.state.doctorOfTask[id]===undefined) {
-            // var warning = this.state.msg;
-            // warning[id] = "Please sign off to complete task. -->";
-            // this.setState({msg: warning});
             this.setState({msg: "Please sign off to complete task. -->"});
             return false;
         }
-        return true;
+        for(let i = 0; i < this.state.hospitalPersons.length; i++) {
+            if (this.state.hospitalPersons[i].email === this.state.doctorOfTask[id]) {
+                return true;
+            }
+            else {
+                this.setState({msg: "Account not recognised."});
+                return false;
+            }
+        }
+
+        this.setState({msg: "NHS Email not found."});
+        return false;
     }
 
     handleFollowUp(e) {
@@ -44,6 +53,7 @@ class TasksBox extends Component {
 
     handleSubmit(e) {
         if(this.checkEntries(e.target.name)) {
+            console.log("All good")
             HandoverService.archiveTask(e.target.name).then(res => {
                 // Delete from our current list faster than another API call
                 HandoverService.getUncompletedTasks().then((res) => {
@@ -56,6 +66,9 @@ class TasksBox extends Component {
     componentDidMount(){
         HandoverService.getUncompletedTasks().then((res) => {
             this.setState({tasks: res.data})
+        });
+        HospitalPersonnelService.getHospitalPersons().then((res) => {
+            this.setState({hospitalPersons: res.data})
         });
         this.setState({loading: false})
     }
@@ -77,7 +90,7 @@ class TasksBox extends Component {
                                     <Row>
                                         <Col>
                                             <div style={{float: "left", fontWeight: "bold", fontSize: "larger"}}>
-                                                Priority: Urgent
+                                                Priority: {task.urgency}
                                             </div>
                                         </Col>
                                         <Col>
@@ -87,7 +100,7 @@ class TasksBox extends Component {
                                         </Col>
                                         <Col>
                                             <div style={{float: "right", fontWeight: "bold", fontSize: "larger"}}>
-                                                Seniority: SHO
+                                                Seniority: {task.seniorityRequired}
                                             </div>
                                         </Col>
                                     </Row>
@@ -104,7 +117,7 @@ class TasksBox extends Component {
                                         </Col>
                                         <Col>
                                             <div style={{float: "right"}}>
-                                                Covid Status: Blue
+                                                Covid Status: {task.covidStatus}
                                             </div>
                                         </Col>
                                     </Row>
@@ -116,10 +129,7 @@ class TasksBox extends Component {
                                         </Col>
                                         <Col>
                                             <div className="text-center">
-                                                Age: {
-                                                Math.floor((new Date() - new Date(task.patient.dob))
-                                                    / 31557600000) // 1000ms*60s*60mins*24hours*365.25days
-                                                }
+                                                Age: {task.patient.dob}
                                             </div>
                                         </Col>
                                         <Col>
@@ -141,7 +151,7 @@ class TasksBox extends Component {
                                         </Col>
                                         <Col>
                                             <div style={{float: "right"}}>
-                                                Task Created by: Dr. {task.doctorOfTask.name}
+                                                Task Created by: Dr. {task.createdBy}
                                             </div>
                                         </Col>
                                     </Row>

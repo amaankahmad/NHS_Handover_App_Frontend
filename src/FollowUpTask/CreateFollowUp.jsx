@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import FollowUpTaskService from "./FollowUpTaskService";
 import HandoverService from "../Handover/HandoverService";
 import TaskService from "../NewTask/TaskService";
+import Col from "react-bootstrap/Col";
+import Row from "react-bootstrap/Row";
 
 
 class CreateFollowUp extends Component {
@@ -10,6 +12,7 @@ class CreateFollowUp extends Component {
 
         this.state = {
             oldTask: {},
+            doctorCreatedBy: '',
             patientCovidStatus: '',
             taskType: '',
             taskPriority: '',
@@ -18,6 +21,7 @@ class CreateFollowUp extends Component {
             taskAdditionalNotes: '',
             msg: '',
         }
+        this.changeDoctorHandler = this.changeDoctorHandler.bind(this);
         this.changeUpdatePatientLocHandler = this.changeUpdatePatientLocHandler.bind(this);
         this.changeUpdatePatientCovidStatusHandler = this.changeUpdatePatientCovidStatusHandler.bind(this);
         this.changeFollowUpTaskTypeHandler = this.changeFollowUpTaskTypeHandler.bind(this);
@@ -31,36 +35,61 @@ class CreateFollowUp extends Component {
     }
 
     saveTask = (e) => {
+        // var today = new Date();
+        // var date = today.getDate() + '/' + (today.getMonth()+1);
+        // var time = today.getHours() + ':' + today.getMinutes();
+        //
+        // let newTask = {patient: this.state.oldTask.patient, seniority: "FY",
+        //     notes: this.state.taskAdditionalNotes, history: this.state.oldTask.taskDescript+' completed.',
+        //     // History will be N/A since this is a new task and not a follow up task
+        //     taskDescript: this.state.taskType, creationTime: date+' '+time,};
+        //
+        // console.log(JSON.stringify(this.state.oldTask))
+        // console.log(JSON.stringify(newTask))
+
         var today = new Date();
-        var date = today.getDate() + '/' + (today.getMonth()+1);
+        var date = today.getDate() + '-' + (today.getMonth()+1);
         var time = today.getHours() + ':' + today.getMinutes();
-
-        let newTask = {patient: this.state.oldTask.patient, seniority: "FY",
-            notes: this.state.taskAdditionalNotes, history: this.state.oldTask.taskDescript+' completed.',
+        let newTask = {patient: this.state.oldTask, seniority: this.state.taskSeniority, notes: this.state.taskAdditionalNotes,
             // History will be N/A since this is a new task and not a follow up task
-            taskDescript: this.state.taskType, creationTime: date+' '+time,};
+            history: "None", taskDescript: this.state.taskType,
+            creationTime: (date+' '+time), schedule: this.state.taskSchedule,
+            covidStatus: this.state.patientCovidStatus, urgency: this.state.taskPriority, createdBy: this.state.doctorCreatedBy};
+        console.log('New Task =>' + JSON.stringify(newTask))
 
-        console.log(JSON.stringify(this.state.oldTask))
-        console.log(JSON.stringify(newTask))
-
-        // FollowUpTaskService.createFollowUpTask(this.state.oldTask, newTask).then(res => {console.log(JSON.stringify(res))});
         HandoverService.archiveTask(this.props.prevTask).then(res => {});
         TaskService.createTask(newTask).then(res => {});
-        // TaskService.createTask(newTask).then(res => {});
 
     }
 
+    changeDoctorHandler=(event) => {
+        this.setState({doctorCreatedBy: event.target.value});
+    }
     changeUpdatePatientLocHandler=(event) => {
         this.setState({patientLoc: event.target.value});
     }
     changeUpdatePatientCovidStatusHandler=(event) => {
-        this.setState({patientCovidStatus: event.target.value});
+        var val;
+        if(event.target.value) {
+            val = "Red"
+        }
+        else{
+            val = "Blue"
+        }
+        this.setState({patientCovidStatus: val});
     }
     changeFollowUpTaskTypeHandler=(event) => {
         this.setState({taskType: event.target.value});
     }
     changeFollowUpTaskPriorityHandler=(event) => {
-        this.setState({taskPriority: event.target.value});
+        var val;
+        if(event.target.value) {
+            val = "Urgent"
+        }
+        else{
+            val = "Non-urgent"
+        }
+        this.setState({taskPriority: val});
     }
     changeFollowUpTaskSeniorityHandler=(event) => {
         this.setState({taskSeniority: event.target.value});
@@ -73,7 +102,8 @@ class CreateFollowUp extends Component {
     }
 
     checkEntries(e) {
-        if (this.state.patientCovidStatus==="" || this.state.taskType==="" || this.state.taskPriority === "") {
+        if (this.state.patientCovidStatus==="" || this.state.taskType==="" || this.state.taskPriority === ""
+            || this.state.doctorCreatedBy==="") {
             this.setState({msg: "Please fill out all required fields (*)."});
             return false;
         }
@@ -81,10 +111,9 @@ class CreateFollowUp extends Component {
     }
 
     handleFollowUp(e) {
-        e.preventDefault(); // Prevent clicking submit with empty args
         if(this.checkEntries()) {
             this.saveTask();
-            this.props.handover();
+            this.props.handover(this.state.doctorCreatedBy);
         }
     }
 
@@ -131,15 +160,11 @@ class CreateFollowUp extends Component {
 
                 <div>
                     <select name="taskType" id="taskType" onChange={this.changeFollowUpTaskTypeHandler}>
-                        <option value="">
-                            Task Type*
-                        </option>
-                        <option value="completeBloodTest">Complete Blood Test</option>
-                        <option value="checkECGXRay">Check ECG/ X-RAY</option>
-                        <option value="completeClinicalReview">
-                            Complete Clinical Review
-                        </option>
-                        <option value="bespokeTask">Other Task</option>
+                        <option value="">Task Type*</option>
+                        <option value="Complete Blood Test">Complete Blood Test</option>
+                        <option value="Check ECG or X-Ray">Check ECG/ X-RAY</option>
+                        <option value="Complete Clinical Review"> Complete Clinical Review </option>
+                        <option value="Bespoke Task">Other Task</option>
                     </select>
                 </div>
 
@@ -178,7 +203,6 @@ class CreateFollowUp extends Component {
                         </div>
                     </div>
                 </div>
-
                 <div id="containerFour">
                     <div id="additionalNotesBox">
                         <input className = "form-control" id="additionalNotes" type="text"
@@ -192,14 +216,24 @@ class CreateFollowUp extends Component {
                         </div>
                     </strong>
                 </div>
-                <div id="actionButtonsFollowUp">
-                    <div id="addTaskButton">
-                        <button id="AddTask" onClick={this.handleFollowUp}>Add Task</button>
-                    </div>
-                    <button id="ReturnToTaskList" onClick={this.props.handover}>
-                        Return To Task List
-                    </button>
-                </div>
+                <Row className="text-center">
+                    <Col>
+                        <div>
+                            <label style={{float: "right", marginTop: "10px"}}>Sign Off Name (*)
+                                <input type="email" style={{float: "right", marginLeft: "10px"}}
+                                       onChange={this.changeDoctorHandler}/>
+                            </label>
+                        </div>
+                    </Col>
+                    <Col>
+                        <button style={{float: "left"}} id="AddTask" onClick={this.handleFollowUp}>Add Task</button>
+                    </Col>
+                    {/*<Col>*/}
+                    {/*    <button id="ReturnToTaskList" onClick={this.props.handover}>*/}
+                    {/*        Return To Task List*/}
+                    {/*    </button>*/}
+                    {/*</Col>*/}
+                </Row>
             </div>
         );
     }

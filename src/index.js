@@ -12,11 +12,13 @@ import Handover from "./Handover/Handover";
 import ForgotPassword from "./ForgotPassword/ForgotPassword";
 import FollowUpTask from "./FollowUpTask/FollowUpTask";
 import Consultant from "./Consultant/ConsultantPage";
+import Shift from "./Login/Shift";
 
 
 ReactDOM.render(
     <Router>
         <Login/>
+        <Shift />
         <Signup />
         <NewTask />
         <Handover />

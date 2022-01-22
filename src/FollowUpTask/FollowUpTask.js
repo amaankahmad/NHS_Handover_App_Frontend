@@ -19,11 +19,11 @@ import CreateFollowUp from "./CreateFollowUp";
 
 function FollowUpTask() {
     let location= useLocation();
-    console.log(location.state);
+    // console.log(location.state);
 
     let navigate = useNavigate() ;
-    function returnToList() {
-        navigate('/Handover')
+    function returnToList(docName) {
+        navigate('/Handover', {state: {name: docName}})
     }
 
     if (!location.state) {

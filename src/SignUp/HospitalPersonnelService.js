@@ -5,7 +5,7 @@ const HOSPITAL_PERSON_API_BASE_URL = "http://localhost:8080/api/v1/hospital_pers
 
 class HospitalPersonnelService {
     getHospitalPersons() {
-        return axios.get(HOSPITAL_PERSON_API_BASE_URL);
+        return axios.get(HOSPITAL_PERSON_API_BASE_URL+"/getAllHospitalPersons");
     }
 
     // createHospitalPerson(hospitalPersonnel) {

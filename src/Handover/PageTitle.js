@@ -6,7 +6,7 @@ export default function PageTitle({role}) {
         res = 'These are tonight’s available tasks assigned to you: ';
     }
     else {
-        res = 'This is a summary of the night tasks: ';
+        res = "Here is a summary of all the tasks:";
     }
 
     return (

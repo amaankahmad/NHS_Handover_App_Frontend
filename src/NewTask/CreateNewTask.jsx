@@ -16,7 +16,7 @@ class CreateNewTask extends Component {
             taskPriority: '',
             taskSeniority: 'TBD',
             taskSchedule: 'TBD',
-            taskAdditionalNotes: '',
+            taskAdditionalNotes: 'None',
             msg: '',
         }
         this.changePatientNameHandler = this.changePatientNameHandler.bind(this);
@@ -31,24 +31,28 @@ class CreateNewTask extends Component {
         this.changeTaskScheduleHandler = this.changeTaskScheduleHandler.bind(this);
         this.changeTaskAdditionalNotesHandler = this.changeTaskAdditionalNotesHandler.bind(this);
 
+        this.getAge = this.getAge.bind(this);
         this.handleNewTask = this.handleNewTask.bind(this);
 
     }
 
-    saveTask = (e) => {
-        let pat = {name: this.state.patientName, dob: this.state.patientDOB,
-            sex: this.state.patientSex, location: this.state.patientLoc, numMRN: this.state.patientMRN,};
-        let doc = {name: "TBD", dob: "TBD", sex: "TBD", email: "TBD", numPager: "TBD", }
+    getAge(dob) {
+        if(dob !== "TBD" || dob!== "")
+        return Math.floor((new Date() - new Date(dob))
+            / 31557600000) // 1000ms*60s*60mins*24hours*365.25days
+    }
 
+    saveTask = (e) => {
+        let pat = {name: this.state.patientName, dob: this.getAge(this.state.patientDOB),
+            sex: this.state.patientSex, location: this.state.patientLoc, numMRN: this.state.patientMRN,};
         var today = new Date();
-        var date = today.getDate() + '/' + (today.getMonth()+1);
+        var date = today.getDate() + '-' + (today.getMonth()+1);
         var time = today.getHours() + ':' + today.getMinutes();
         let task = {patient: pat, seniority: this.state.taskSeniority, notes: this.state.taskAdditionalNotes,
             // History will be N/A since this is a new task and not a follow up task
-            history: 'N/A', taskDescript: this.state.taskType, creationTime: date+' '+time,};
-        // History will be N/A since this is a new task and not a follow up task
-        // let task = {notes: this.state.taskAdditionalNotes, creationTime: date+' '+time, history: 'N/A',
-        //     seniority: this.state.taskSeniority, taskDescript: this.state.taskType, doctorOfTask: doc, patient: pat};
+            history: 'None', taskDescript: this.state.taskType, creationTime: (date+' '+time),
+            schedule: this.state.taskSchedule, covidStatus: this.state.patientCovidStatus, urgency: this.state.taskPriority,
+            createdBy: this.props.doc};
         console.log('New Task =>' + JSON.stringify(task))
 
         TaskService.createTask(task).then(res => {});
@@ -70,13 +74,27 @@ class CreateNewTask extends Component {
         this.setState({patientSex: event.target.value});
     }
     changePatientCovidStatusHandler=(event) => {
-        this.setState({patientCovidStatus: event.target.value});
+        var val;
+        if(event.target.value) {
+            val = "Red"
+        }
+        else{
+            val = "Blue"
+        }
+        this.setState({patientCovidStatus: val});
     }
     changeTaskTypeHandler=(event) => {
         this.setState({taskType: event.target.value});
     }
     changeTaskPriorityHandler=(event) => {
-        this.setState({taskPriority: event.target.value});
+        var val;
+        if(event.target.value) {
+            val = "Urgent"
+        }
+        else{
+            val = "Non-urgent"
+        }
+        this.setState({taskPriority: val});
     }
     changeTaskSeniorityHandler=(event) => {
         this.setState({taskSeniority: event.target.value});
@@ -154,7 +172,7 @@ class CreateNewTask extends Component {
                         </div>
                         <div id="DOBN">
                             <input className = "form-control" type="text"
-                                   placeholder={"DOB"} onChange={this.changePatientDOBHandler}/>
+                                   placeholder={"DOB (DD/MM/YYYY)"} onChange={this.changePatientDOBHandler}/>
                         </div>
                         <div id="priorityN">
                             <p id="priorityLabel">Priority* :</p>{" "}
@@ -182,10 +200,10 @@ class CreateNewTask extends Component {
                 <div>
                     <select name="taskType" defaultValue="" id="taskTypeN" onChange={this.changeTaskTypeHandler}>
                         <option value="">Task Type*</option>
-                        <option value="completeBloodTest">Complete Blood Test</option>
-                        <option value="checkECGXRay">Check ECG/ X-RAY</option>
-                        <option value="completeClinicalReview"> Complete Clinical Review </option>
-                        <option value="bespokeTask">Other Task</option>
+                        <option value="Complete Blood Test">Complete Blood Test</option>
+                        <option value="Check ECG or X-Ray">Check ECG/ X-RAY</option>
+                        <option value="Complete Clinical Review"> Complete Clinical Review </option>
+                        <option value="Bespoke Task">Other Task</option>
                     </select>
                 </div>
 

@@ -1,11 +1,14 @@
 import React, {Component} from 'react';
 import './Login.css';
+import HospitalPersonnelService from "../SignUp/HospitalPersonnelService";
 
 class LoginDoctor extends Component {
     constructor(props) {
         super(props);
 
         this.state = {
+            loading: true,
+            hospitalPersons: [],
             email: '',
             password: '',
             msg: '',
@@ -25,13 +28,27 @@ class LoginDoctor extends Component {
         this.setState({password: event.target.value});
     }
 
-    validation(e) {
-        // TODO: Check if doctor email in database
-        // if (this.state.password!==this.state.confirmPassword) {
-        //     this.setState({msg:"Passwords do not match."});
-        //     return false;
-        // }
-        return true;
+    validateAndNavigate(e) {
+        for(let i = 0; i < this.state.hospitalPersons.length; i++) {
+            if (this.state.hospitalPersons[i].email === this.state.email) {
+                if(this.state.hospitalPersons[i].password === this.state.password) {
+                    if(this.state.hospitalPersons[i].role === "Consultant") {
+                        this.props.consultantPage(this.state.hospitalPersons[i].name);
+                    }
+                    else {
+                        this.props.login(this.state.hospitalPersons[i].name);
+                    }
+                    return true;
+                }
+                else {
+                    this.setState({msg: "Incorrect Password"});
+                    return false;
+                }
+            }
+        }
+
+        this.setState({msg: "NHS Email not found."});
+        return false;
     }
 
     checkEntries() {
@@ -45,13 +62,22 @@ class LoginDoctor extends Component {
     handleSubmit(e) {
         e.preventDefault(); // Prevent clicking submit with empty args
         if(this.checkEntries()) {
-            if(this.validation()) {
-                this.props.login();
+            if(this.validateAndNavigate()) {
             }
         }
     }
 
+    componentDidMount(){
+        HospitalPersonnelService.getHospitalPersons().then((res) => {
+            this.setState({hospitalPersons: res.data})
+        });
+        this.setState({loading: false})
+    }
+
     render() {
+        if (this.state.loading) {
+            return <div className="text-center">...</div>
+        }
         return (
             <div id="mainBoxL">
                 <div className="row">

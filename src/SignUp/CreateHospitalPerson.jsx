@@ -8,6 +8,8 @@ class CreateHospitalPerson extends Component {
         super(props);
 
         this.state = {
+            hospitalPersons: [],
+            loading: '',
             name: '',
             email: '',
             numPager: '',
@@ -33,9 +35,11 @@ class CreateHospitalPerson extends Component {
         console.log('Hospital Personnel =>' + JSON.stringify(hospitalPersonnel))
 
         if (this.state.role === "Consultant") {
+            console.log("Creating Consultant...")
             HospitalPersonnelService.createConsultant(hospitalPersonnel).then(res => {});
         }
         else {
+            console.log("Creating Junior Doctor...")
             HospitalPersonnelService.createJuniorDoctor(hospitalPersonnel).then(res => {});
         }
     }
@@ -65,6 +69,13 @@ class CreateHospitalPerson extends Component {
             this.setState({msg:"Passwords do not match."});
             return false;
         }
+        for(let i = 0; i < this.state.hospitalPersons.length; i++) {
+            if (this.state.hospitalPersons[i].email === this.state.email) {
+                this.setState({msg: "Account already exists."});
+                return false;
+            }
+        }
+
         return true;
     }
 
@@ -82,12 +93,27 @@ class CreateHospitalPerson extends Component {
         if(this.checkEntries()) {
             if(this.validation()) {
                 this.saveHospitalPerson();
-                this.props.register();
+                if (this.state.role === "Consultant") {
+                    this.props.navConsultant(this.state.name);
+                }
+                else {
+                    this.props.navJuniorDr(this.state.name);
+                }
             }
         }
     }
 
+    componentDidMount(){
+        HospitalPersonnelService.getHospitalPersons().then((res) => {
+            this.setState({hospitalPersons: res.data})
+        });
+        this.setState({loading: false})
+    }
+
     render() {
+        if (this.state.loading) {
+            return <div className="text-center">...</div>
+        }
         return (
             <div className="container">
                 {/*<form>*/}
