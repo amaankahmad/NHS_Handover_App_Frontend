@@ -242,7 +242,7 @@
 }
 #containerButtons2 {
   margin-left: 50%;
-  margin-bottom: 60%;
+  /*margin-bottom: 10%;*/
 }
 
 #containerT {
@@ -266,8 +266,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
-  margin: 3rem;
+  padding: 0;
+  margin: 1rem;
   width: 75vw;
   background-color: white;
   /*background-color: dodgerblue;*/

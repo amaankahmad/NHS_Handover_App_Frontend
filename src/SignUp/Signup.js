@@ -6,6 +6,7 @@ import doc2 from "../Asset/doc2.jpg";
 import "./Signup.css";
 import { Routes, Route } from "react-router-dom";
 import { useNavigate } from "react-router";
+import CreateHospitalPerson from "./CreateHospitalPerson";
 
 
 function HeaderSignUp() {
@@ -23,6 +24,12 @@ function MainSignUp() {
   function returnLogIn() {
     navigate("/");
   }
+  function navigateToShift(docName) {
+    navigate("/shift", {state: {name: docName}});
+  }
+  function navigateToConsultant(docName) {
+    navigate("/Consultant", {state: {name: docName}});
+  }
 
   return (
     <section id="signupForm">
@@ -32,54 +39,7 @@ function MainSignUp() {
             <h2> Create a new profile: </h2>
           </div>
           <div id="mainBox">
-            <div className="row">
-              <label>
-                <b>Name:</b>
-              </label>
-              <input id="inputSignup" type="text"></input>
-            </div>
-            <div className="row">
-              <label>
-                <b>Pager Number:</b>
-              </label>
-              <input id="inputSignup" type="text"></input>
-            </div>
-            <div className="row">
-              <label>
-                <b>Email:</b>
-              </label>
-              <input id="inputSignup" type="email"></input>
-            </div>
-            <div className="row">
-              <label>
-                <b>Password:</b>
-              </label>
-              <input id="inputSignup" type="password"></input>
-            </div>
-            <div className="row">
-              <label>
-                <b>Confirm Password:</b>
-              </label>
-              <input id="inputSignup" type="password"></input>
-            </div>
-            <div className="row">
-              <label htmlFor="role">
-                <b>Role:</b>
-              </label>
-              <select name="role" id="role">
-                <option value="empty"></option>
-                <option value="JuniorDoctor">FY</option>
-                <option value="SHO">SHO</option>
-                <option value="Consultant">Spr/Cons</option>
-              </select>
-            </div>
-            <div id="actionButtonsSignUp">
-              <button id="actionButtonSignUp">Register</button>
-
-              <button id="actionButtonSignUp" onClick={returnLogIn}>
-                Return to login page
-              </button>
-            </div>
+            <CreateHospitalPerson home={returnLogIn} navJuniorDr={navigateToShift} navConsultant={navigateToConsultant}/>
           </div>
         </div>
 

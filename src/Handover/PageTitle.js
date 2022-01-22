@@ -5,11 +5,8 @@ export default function PageTitle({role}) {
     if (role === 'Junior Doctor') {
         res = 'These are tonight’s available tasks assigned to you: ';
     }
-    else if (role === 'SHO') {
-        res = 'These are your tasks: ';
-    }
     else {
-        res = 'This is a summary of the night tasks: ';
+        res = "Here is a summary of all the tasks:";
     }
 
     return (
