@@ -114,7 +114,7 @@ class ConsultantOverview extends Component {
                                         </Col>
                                         <Col>
                                             <div style={{float: "right"}}>
-                                                Task Created by: Dr. {task.doctorOfTask.name}
+                                                Task Created by: Dr. {task.createdBy}
                                             </div>
                                         </Col>
                                     </Row>
