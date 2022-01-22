@@ -1,14 +1,15 @@
 import './HandoverScreen.css';
-import BottomNavbar from "./BottomNavbar";
 import WelcomeBanner from "./WelcomeBanner";
 import PageTitle from "./PageTitle";
 import TasksBox from "./TasksBox";
 import {Routes, Route} from "react-router-dom";
-import HandoverService from "./HandoverService";
+import {useNavigate} from "react-router";
 
 function Handover() {
-    // var tasks = HandoverService.getUncompletedTasks();
-    // console.log(tasks)
+    let navigate = useNavigate();
+    function navigateToFollowUp(data) {
+        navigate('/FollowUpTask', {state: {id: data}})
+    }
 
     return (
          <div className={"Handover"}>
@@ -18,8 +19,7 @@ function Handover() {
             {/* Modularising the code such that we can just import Bottom Navbar whenever needed as a template */}
             <WelcomeBanner name="Dr. House"/>
             <PageTitle role={"Junior Doctor"}/>
-            <TasksBox/>
-            <BottomNavbar role={"Junior Doctor"}/>
+            <TasksBox followUp={navigateToFollowUp}/>
                  </>}/>
              </Routes>
          </div>

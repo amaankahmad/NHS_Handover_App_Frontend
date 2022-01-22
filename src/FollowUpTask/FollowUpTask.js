@@ -9,7 +9,7 @@ import './FollowUpTask.css';
 //import DateTime from './DateTime'
 //import taskIcon from './taskIcon.png';
 import {Routes, Route} from "react-router-dom";
-import { useNavigate } from 'react-router';
+import {useLocation, useNavigate} from 'react-router';
 import taskIcon from '../Asset/taskIcon.png';
 import DateTime from '../NewTask/DateTime';
 import React from "react";
@@ -18,13 +18,17 @@ import CreateFollowUp from "./CreateFollowUp";
 
 
 function FollowUpTask() {
+    let location= useLocation();
+    console.log(location.state);
+
     let navigate = useNavigate() ;
     function returnToList() {
         navigate('/Handover')
     }
 
-    var taskClickedOn = {patient: {name: "TBD", dob: "TBD", sex: "TBD", location: "TBD", numMRN: "TBD"},
-                            seniority: "TBD", notes: "TBD", history: 'N/A', taskDescript: "TBD", creationTime: "TBD"};
+    if (!location.state) {
+        return <div>...</div>
+    }
 
     return(
         <div className={"FollowUpTask"}>
@@ -42,7 +46,7 @@ function FollowUpTask() {
                         />
                 </div>
                 </div>
-                    <CreateFollowUp handover={returnToList} prevTask={taskClickedOn}/>
+                    <CreateFollowUp handover={returnToList} prevTask={location.state.id}/>
                     </>}
                 />
                 </Routes>

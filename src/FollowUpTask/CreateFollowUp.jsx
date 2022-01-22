@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import FollowUpTaskService from "./FollowUpTaskService";
+import HandoverService from "../Handover/HandoverService";
+import TaskService from "../NewTask/TaskService";
 
 
 class CreateFollowUp extends Component {
@@ -7,6 +9,7 @@ class CreateFollowUp extends Component {
         super(props);
 
         this.state = {
+            oldTask: {},
             patientCovidStatus: '',
             taskType: '',
             taskPriority: '',
@@ -28,19 +31,23 @@ class CreateFollowUp extends Component {
     }
 
     saveTask = (e) => {
-        let prev = this.props.prevTask;
-
         var today = new Date();
         var date = today.getDate() + '/' + (today.getMonth()+1);
         var time = today.getHours() + ':' + today.getMinutes();
 
-        let newTask = {patient: prev.patient, seniority: this.state.seniority, notes: this.state.taskAdditionalNotes,
+        let newTask = {patient: this.state.oldTask.patient, seniority: "FY",
+            notes: this.state.taskAdditionalNotes, history: this.state.oldTask.taskDescript+' completed.',
             // History will be N/A since this is a new task and not a follow up task
-            history: prev.history, taskDescript: this.state.taskType, creationTime: date+' '+time,};
+            taskDescript: this.state.taskType, creationTime: date+' '+time,};
 
+        console.log(JSON.stringify(this.state.oldTask))
         console.log(JSON.stringify(newTask))
 
-        FollowUpTaskService.createFollowUpTask(prev, newTask).then(res => {});
+        // FollowUpTaskService.createFollowUpTask(this.state.oldTask, newTask).then(res => {console.log(JSON.stringify(res))});
+        HandoverService.archiveTask(this.props.prevTask).then(res => {});
+        TaskService.createTask(newTask).then(res => {});
+        // TaskService.createTask(newTask).then(res => {});
+
     }
 
     changeUpdatePatientLocHandler=(event) => {
@@ -50,7 +57,6 @@ class CreateFollowUp extends Component {
         this.setState({patientCovidStatus: event.target.value});
     }
     changeFollowUpTaskTypeHandler=(event) => {
-        console.log(event.target.value);
         this.setState({taskType: event.target.value});
     }
     changeFollowUpTaskPriorityHandler=(event) => {
@@ -80,6 +86,11 @@ class CreateFollowUp extends Component {
             this.saveTask();
             this.props.handover();
         }
+    }
+
+    componentDidMount(){
+        FollowUpTaskService.getTask(this.props.prevTask).then((res) => {
+            this.setState({oldTask: res.data})});
     }
 
     render() {
